@@ -1,0 +1,14 @@
+{
+  "id": "fx-regenerated-artifact",
+  "title": "A verification step destroyed the thing it was verifying",
+  "mechanisms": ["reproducibility", "regenerate", "fixed-path", "artifact", "determinism"],
+  "problem": "Confirm that regenerating an output produces the same output.",
+  "failure": "The instruction said to re-run the generator and said nothing about the previous output. The generator writes to fixed paths, so the re-run overwrote the artifact under comparison. Only its recorded digest survived.",
+  "correction": "Logged as a defect in the instruction: a task that re-runs a generator must state what happens to the previous output.",
+  "transfer": "A check that consumes its own evidence cannot be repeated, and its result cannot be re-examined.",
+  "limits": "FIXTURE. Test data for tests/retrieval_soundness_R01.py. Generalised from a real finding in a private lane; carries no path, digest or identifier from it.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_soundness_R01.py", "visibility": "public"},
+  "status": "SOURCE_ONLY",
+  "author": "FIXTURE",
+  "extractor": "FIXTURE"
+}

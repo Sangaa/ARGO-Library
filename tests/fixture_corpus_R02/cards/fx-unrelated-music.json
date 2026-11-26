@@ -1,0 +1,12 @@
+{
+  "id": "fx-unrelated-music",
+  "title": "A render that is not reproducible cannot be used as a measuring instrument",
+  "mechanisms": ["render", "determinism", "dither", "audio", "reproducibility", "تكرار", "صوت"],
+  "problem": "Confirm that regenerating an output produces the same bytes.",
+  "failure": "Two runs gave an identical byte count and different bytes, and the re-run had already overwritten the artifact under comparison.",
+  "correction": "A task that re-runs a generator must state what happens to the previous output.",
+  "transfer": "A bench that cannot reproduce a byte sequence cannot be asked to certify one.",
+  "limits": "FIXTURE. Test data for tests/retrieval_bilingual_R02.py. Serves as the unrelated negative control: no query about retrieval, identity or permissions should return it.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "SOURCE_ONLY", "author": "FIXTURE", "extractor": "FIXTURE"
+}

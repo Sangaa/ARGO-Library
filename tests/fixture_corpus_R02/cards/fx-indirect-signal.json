@@ -1,0 +1,12 @@
+{
+  "id": "fx-indirect-signal",
+  "title": "An indirect signal can be the only measurement available, and must be labelled as one",
+  "mechanisms": ["indirect-signal", "proxy-measure", "bounded-proxy", "inference", "مؤشر-غير-مباشر", "استدلال"],
+  "problem": "The quantity of interest cannot be measured, and only a correlated signal is available.",
+  "failure": "The correlated signal was reported as if it were the quantity, and a later reader built on it as a measurement.",
+  "correction": "Keep the signal, label it BOUNDED_PROXY, and state what it does and does not establish.",
+  "transfer": "An indirect measurement is usable; an indirect measurement reported as direct is not. The defect is the label, not the method.",
+  "limits": "FIXTURE. Test data for tests/retrieval_bilingual_R02.py. Deliberately close to fx-direct-probe: both concern proxies, and they prescribe opposite actions.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "SOURCE_ONLY", "author": "FIXTURE", "extractor": "FIXTURE"
+}
