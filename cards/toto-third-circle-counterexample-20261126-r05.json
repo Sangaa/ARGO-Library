@@ -1,0 +1,27 @@
+{
+  "id": "toto-third-circle-counterexample-20261126-r05",
+  "title": "More observations need not improve an identification threshold",
+  "mechanisms": [
+    "identifiability",
+    "counterexample",
+    "observation-redundancy",
+    "finite-support",
+    "scope",
+    "رصد",
+    "مثال مضاد",
+    "حدود التعميم"
+  ],
+  "problem": "Extend the sharp two-circle threshold to three separate residue observations on an unbounded integer lattice.",
+  "failure": "Extrapolating the degree of the lcm to arbitrary numbers of circles on unbounded support fails: moduli 3,5,7 have lcm-polynomial degree 13, but row 12 has a distinct nonnegative competitor matching moments 0..3 and all three folds.",
+  "correction": "Construct the perturbation z^(-a)(1-z^a)^2(1-z^b)(1-z^c). Check coefficient signs, mass, moments and folds. The sharp threshold is b+c-1 when 2<=a<=b<=c and gcd(b,c)=1.",
+  "transfer": "Before assuming additional sensors improve a worst-case guarantee, construct admissible rivals in the joint observation kernel. Distinguish finite-window degree bounds from unbounded-support identifiability.",
+  "limits": "Author-derived theorem and bounded exact tests of the constructive direction; uniqueness uses R04. General noncoprime triples, noise, novelty and independent verification remain open. No claim that a third sensor is useless for all tasks.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/0350819780d215ddf191627ad5613aeef7baabd3/pascal-singmaster/toto-sparks/R05/TOTO_RESEARCH_SPARKS_R05.md",
+    "visibility": "public",
+    "revision": "0350819780d215ddf191627ad5613aeef7baabd3"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
