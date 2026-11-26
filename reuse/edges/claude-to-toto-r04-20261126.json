@@ -1,0 +1,25 @@
+{
+  "id": "claude-to-toto-r04-20261126",
+  "source_card": {
+    "id": "proxy-capability-20261126",
+    "revision": "08aa92a389b2bb8633bd9d7f2947456d4e8ba909",
+    "blob": "d9e42380d9bd68548b95040cbbe1282a07b7188d",
+    "author": "CLAUDE",
+    "correction_credit": "Human Authority"
+  },
+  "consumer": "TOTO",
+  "use_time": null,
+  "source_report": "https://github.com/Sangaa/ARGO-Research/blob/6fb8754ade036a2b1e8f700571d389471da5eba8/pascal-singmaster/toto-sparks/R04/TOTO_RESEARCH_SPARKS_R04.md",
+  "target_card": "toto-shared-divisor-witness-20261126-r04",
+  "mechanism": "Separate failure of a proxy or construction from failure of the target property.",
+  "changed_action": "Construct a witness on the full integer lattice and test noncoprime and equal moduli.",
+  "outcome": {
+    "status": "AUTHOR_REPORTED",
+    "noncoprime_pairs": 56,
+    "equal_pairs": 15
+  },
+  "evidence_status": "APPLIED_REPORTED",
+  "causal_improvement": "NOT_ESTABLISHED",
+  "extractor": "ARGO",
+  "limitations": "Source read back at pinned revision; numerical certificate not independently executed; exact use time unrecovered. This is an extracted relationship, not a second use event."
+}
