@@ -1,0 +1,24 @@
+{
+  "id": "proxy-capability-20261126",
+  "title": "A failing proxy is not an absent capability",
+  "mechanisms": [
+    "proxy-test",
+    "capability",
+    "authentication",
+    "tool-access",
+    "اختبار",
+    "صلاحيات"
+  ],
+  "problem": "Determine whether GitHub API access is available.",
+  "failure": "Claude inferred API unavailability from gh auth status without testing gh api.",
+  "correction": "Test the requested API operation directly; Claude reported that gh api worked. Human Authority prompted the correction.",
+  "transfer": "Before declaring a capability absent, test the actual capability with a safe direct probe rather than a proxy.",
+  "limits": "A reported single-session correction; does not guarantee access in other sessions or authorize writes.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/main/pascal-singmaster/reviews/REV_01_LIVING_REFERENCE_AND_OCTAGON_2026-11-26.md",
+    "visibility": "public"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "CLAUDE; correction prompted by Human Authority",
+  "extractor": "ARGO"
+}
