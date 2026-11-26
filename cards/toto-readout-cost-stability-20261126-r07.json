@@ -1,0 +1,28 @@
+{
+  "id": "toto-readout-cost-stability-20261126-r07",
+  "title": "Exact identifiability does not guarantee stable recovery",
+  "mechanisms": [
+    "conditioning",
+    "singular-values",
+    "inverse-problem",
+    "measurement-cost",
+    "rank",
+    "noise",
+    "استقرار",
+    "ضوضاء",
+    "تكلفة الرصد"
+  ],
+  "problem": "Choose additional directional line-sum measurements for a square lattice after four fixed projections.",
+  "failure": "A minimum-cost full-rank design meets exact uniqueness but is not necessarily a stable inverse. On the 10x10 grid the extra normal (1,7) has 73 occupied bins yet minimum singular value about 0.079; (1,8) costs 82 and has about 0.291. This is a counterexample to treating uniqueness as sufficient for choosing a stable design, not a failure of the uniqueness theorem.",
+  "correction": "State the readout-cost and noise model separately; establish injectivity, then measure the actual observation matrix's smallest singular value. Compare cost versus amplification and retain numerical and physical limitations.",
+  "transfer": "In any linear inverse problem, distinguish structural rank from quantitative conditioning. Do not deploy a minimum-cost identifiable design solely on the basis of rank; assess sensitivity using a noise model appropriate to the actual instruments.",
+  "limits": "R07 exact bin-count theorem assumes primitive integer normals and per-occupied-bin cost. Bounded NumPy SVD comparison assumes additive Euclidean error and unconstrained least squares. No actual noise simulation, physical tests, independent review or claim of global conditioning optimum.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/b2d731b67ee102542bff651294976b6e69d8f01c/pascal-singmaster/toto-sparks/R07/TOTO_RESEARCH_SPARKS_R07.md",
+    "visibility": "public",
+    "revision": "b2d731b67ee102542bff651294976b6e69d8f01c"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
