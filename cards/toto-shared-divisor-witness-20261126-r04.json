@@ -1,0 +1,18 @@
+{
+  "id": "toto-shared-divisor-witness-20261126-r04",
+  "title": "A failed proof construction need not refute the target property",
+  "mechanisms": ["proof-scope", "invariant-classes", "gcd", "interpolation", "direct-test", "counterexample", "تعميم", "برهان", "القاسم المشترك", "استيفاء"],
+  "problem": "Extend exact two-circle identifiability from coprime moduli to arbitrary integer moduli.",
+  "failure": "The original R03 cycle construction relies on coprimality; directly extending its recurrence is not justified when the shift splits into several orbits. This is a proof-scope limitation, not an observed counterexample to identifiability.",
+  "correction": "Reduce by the gcd, construct the coprime nonnegative witness, then interpolate adjacent witnesses on invariant residue classes. Prove the observable decomposition and test noncoprime, nested and duplicate moduli directly.",
+  "transfer": "When a construction stops working after relaxing an assumption, separate construction failure from property failure. Look for invariant classes, solve reduced instances, and verify that recombination preserves both the property and the observable form. The source records analogy to the earlier Library proxy-capability card, not a claim of causal learning improvement.",
+  "limits": "Mathematical derivation with author-run exact bounded checks in R04; no independent review or originality assessment. The specific threshold is for two residue distributions and two raw moments on Z, not arbitrary multivariate or noisy observations.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/6fb8754ade036a2b1e8f700571d389471da5eba8/pascal-singmaster/toto-sparks/R04/TOTO_RESEARCH_SPARKS_R04.md",
+    "visibility": "public",
+    "revision": "6fb8754ade036a2b1e8f700571d389471da5eba8"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO; Claude's proxy lesson prompted by Human Authority is separately attributed in the source",
+  "extractor": "TOTO"
+}
