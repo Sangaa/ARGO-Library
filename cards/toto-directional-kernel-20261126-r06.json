@@ -1,0 +1,29 @@
+{
+  "id": "toto-directional-kernel-20261126-r06",
+  "title": "Directional observation kernels can hide distinct positive distributions",
+  "mechanisms": [
+    "identifiability",
+    "discrete-tomography",
+    "switching-component",
+    "rank-nullity",
+    "projection",
+    "mixed-moments",
+    "convolution",
+    "إسقاط",
+    "نواة الرصد",
+    "عزوم"
+  ],
+  "problem": "Distinguish a rectangular Pascal probability law from nonnegative rivals using complete directional marginals.",
+  "failure": "R05's lesson warns against assuming multiple observations determine the full distribution; axis and both diagonal projections still admit distinct positive distributions on a 4 by 4 grid.",
+  "correction": "Represent directional projection kernels using primitive binomial factors and their product. Compare its bidegree to the supported rectangle, and verify the resulting nullity with exact matrix rank. Construct a positive rival and test mixed moments and convolution.",
+  "transfer": "Measure the actual joint observation kernel before choosing additional sensors. Distinguish exact algebraic identifiability from stability under noise; a new direction can remove ambiguity even if repeated observations in old directions do not.",
+  "limits": "Switching-component theorem and dimension are established prior art (Hajdu and Tijdeman, 2001). R06 is a session-derived Pascal application with bounded local exact tests; no originality or independent validation claim, no physical or noisy-data inference. Full axis marginals constrain nonnegative competitors to the rectangle.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/2742bc6bb33a2634c6d0c44ece5909214d821bc2/pascal-singmaster/toto-sparks/R06/TOTO_RESEARCH_SPARKS_R06.md",
+    "visibility": "public",
+    "revision": "2742bc6bb33a2634c6d0c44ece5909214d821bc2"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO; established switching-component theory credited to Hajdu and Tijdeman in source",
+  "extractor": "TOTO"
+}
