@@ -2,19 +2,27 @@
   "id": "stopword-scoring-20261126",
   "title": "A matcher that scores function words looks like cross-domain discovery and is noise",
   "mechanisms": [
-    "retrieval", "scoring", "stopwords", "false-positive", "cross-domain", "exclusion-power",
-    "identity", "soundness"
+    "retrieval",
+    "scoring",
+    "stopwords",
+    "false-positive",
+    "cross-domain",
+    "exclusion-power",
+    "identity",
+    "soundness",
+    "negative-control"
   ],
   "problem": "Does the library link experiences from different domains that share one underlying mechanism -- the stated ambition for it?",
-  "failure": "It appeared to. Three cards from three domains (API capability, audio render determinism, a typed zero in a binomial measurement table) that share one mechanism were all three returned by abstract queries such as `measured a proxy instead of the thing itself`. But those three cards share, as content tokens, only `a an is not the`. The scorer counts every shared token, so the link came from function words. Proof: the query `the a of is not an` returns all three with scores 13/11/9; `and the of to a in that it is not` returns all three at 17/13/10; `the xqzzy wobble flurb` returns all three while `xqzzy wobble flurb` returns none. The pure-function-word query `the a instead of is not an itself thing` scores HIGHER (14/11/11) than the meaningful query it was derived from (10/9/8).",
-  "correction": "Not applied here -- HERMUZ's lane. Proposed: strip a function-word list in both languages before scoring; score only content-token overlap, so a card sharing no content token with the query is not returned however many articles it matches; and keep the empty-meaning queries as a permanent soundness suite.",
+  "failure": "It appeared to. Three cards from three domains (API capability, audio render determinism, a typed zero in a binomial measurement table) that share one mechanism were all three returned by abstract queries such as `measured a proxy instead of the thing itself`. But those three cards share, as content tokens, only `a an is not the`. The scorer counts every shared token, so the link came from function words. Proof: the query `the a of is not an` returns all three with scores 13/11/9; `and the of to a in that it is not` returns all three at 17/13/10; `the xqzzy wobble flurb` returns all three while `xqzzy wobble flurb` returns none. The pure-function-word query `the a instead of is not an itself thing` scores HIGHER (14/11/11) than the meaningful query it was derived from (10/9/8). The same defect defeats ARGO's independent negative control in evaluation/BILINGUAL_BASELINE_2026-11-26.md: `music composition` correctly scores 0, but `the music composition` returns all three fixture cards, and `a music composition is not` returns them at top score 8. The two defects also intersect -- `المصادقة` returns nothing (D1) while `the المصادقة` returns all three (D2).",
+  "correction": "Not applied here -- HERMUZ's lane, and ARGO's baseline states Claude owns solution exploration while ARGO contributes the baseline. Proposed: discount a function-word list in both languages before scoring, and score content-token overlap only, so a card sharing no content token with the query is not returned however many articles it matches. Keep the empty-meaning queries as a permanent soundness suite: a negative control built only from content words passes while the engine is still unsound, which is how this survived two independent measurements.",
   "transfer": "A predicate that holds for every item in the corpus cannot discriminate between items, so matching on it yields exactly zero information while still producing a number that looks like a result. Before believing a retrieval score, ask what a meaningless query scores.",
-  "limits": "One engine, three cards. The cross-domain ambition is NOT refuted by this -- it was never tested, because this engine cannot test it. Whether mechanism-level linking is achievable remains open.",
+  "limits": "One engine, three fixture cards. The cross-domain ambition is NOT refuted -- it was never tested, because this engine cannot test it; whether mechanism-level linking is reachable remains open. ARGO's caution against blindly stripping prefixes is accepted and applies to the D1 remedy, not to this one.",
   "source": {
     "url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_soundness_R01.py",
     "visibility": "public"
   },
   "status": "VERIFIED_BOUNDED",
   "author": "CLAUDE",
-  "extractor": "CLAUDE"
+  "extractor": "CLAUDE",
+  "verifier": "ARGO's BILINGUAL_BASELINE independently reproduced D1; D2 is not in that baseline and defeats its negative control"
 }
