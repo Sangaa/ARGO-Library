@@ -1,0 +1,23 @@
+{
+  "id": "gold-lab-p001-baseline-miss-and-attribution-boundary-20261127",
+  "title": "Preserve the one-target miss without inventing feature attribution",
+  "mechanisms": [
+    "prospective-forecast-scoring",
+    "baseline-comparison",
+    "frozen-model-attribution",
+    "missing-data"
+  ],
+  "problem": "Gold Lab R01 P001 global point forecast was scored after its target date against the frozen B0 baseline; R01 had no frozen deterministic feature-to-weight snapshot.",
+  "failure": "On the single scored global target, P001 absolute error was $131.41/oz while B0 error was $48.54/oz, so P001 was worse by $82.87/oz. Egypt was unscorable because no comparable closing seller-ask source and time had been preselected. No R01 feature attribution can be reconstructed from the frozen record.",
+  "correction": "Keep the miss and the frozen B0 comparison unchanged. Do not refit weights, claim aggregate skill from one target, or retrospectively assign causal feature contributions. Keep Egypt marked unscored until comparable quote rules and timestamps exist; leave R02 at ABSTAIN/MISSING until its prospective issuance gates pass.",
+  "transfer": "Freeze model version, input vintages, feature values and weights at issuance. Score model and baseline on identical predeclared targets; retain abstentions and missing outcomes in denominators and reports. Treat retrospective decomposition as unavailable when the required snapshot was not frozen.",
+  "limits": "One post-target vendor-page observation with exact retrieval minute unavailable; provider pages differed. This is a bounded single-target score, not an estimate of forecasting skill, evidence of learning, or a literature/originality claim. Egypt outcome remains unscored.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f4cf1014212e1d2a81cd204fdd98ec3244efc981/gold-market/records/issue_comment_7192345398.md",
+    "visibility": "public",
+    "revision": "f4cf1014212e1d2a81cd204fdd98ec3244efc981"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "Original Gold Lab issue record; TOTO migration reassessment",
+  "extractor": "TOTO"
+}

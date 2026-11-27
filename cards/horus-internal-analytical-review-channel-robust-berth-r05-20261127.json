@@ -1,0 +1,23 @@
+{
+  "id": "horus-internal-analytical-review-channel-robust-berth-r05-20261127",
+  "title": "Record HORUS as an internal analytic agent, not a separate session",
+  "mechanisms": [
+    "review-provenance",
+    "agent-collaboration",
+    "session-identity",
+    "epistemic-status"
+  ],
+  "problem": "The R05 berth-allocation report names HORUS in its review trail, which could be misread as an independently opened ChatGPT conversation or an external peer review.",
+  "failure": "A role label alone can obscure whether the review came from a separate conversation, external provider, or an internal analytic agent.",
+  "correction": "The R05 development log records HORUS as an internal analytical collaboration agent reviewing an exact candidate head. It states that this was not a separate provider conversation and no provider session ID exists. Describe that execution channel plainly and do not attribute the review to Gold Lab methodology.",
+  "transfer": "For every review claim, record the actual participant and channel, exact reviewed head, and genuine session identifier only when available. Distinguish internal model-side analysis from a separate session and from human peer review.",
+  "limits": "This is provenance for the R05 berth-buffer study only. It does not establish a general review protocol, validate the math by itself, or imply HORUS reviewed the Gold Lab.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f4cf1014212e1d2a81cd204fdd98ec3244efc981/robust-berth-buffer-allocation/R05/DEVELOPMENT_LOG.md",
+    "visibility": "public",
+    "revision": "f4cf1014212e1d2a81cd204fdd98ec3244efc981"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "R05 development record; TOTO",
+  "extractor": "TOTO"
+}
