@@ -207,7 +207,7 @@ def main():
         for f in fails:
             print(f"  - {f}")
         return 1
-    print("PASS -- both defects reproduce as described, and no invariant is violated.")
+    print("PASS -- expected fixes hold on the frozen fixture corpus; no checked invariant is violated.")
     return 0
 
 
