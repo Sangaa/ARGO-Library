@@ -1,0 +1,26 @@
+{
+  "id": "toto-reconstruction-anchors-20261127-r22",
+  "title": "Geometric anchors can reduce observation order by breaking residual symmetry",
+  "mechanisms": [
+    "inverse-identification",
+    "distance-matrix",
+    "symmetry-breaking",
+    "trilateration",
+    "invariant-tensors",
+    "literature-first",
+    "negative-result"
+  ],
+  "problem": "Determine whether the required order of exact joint distance observations can grow without bound for finite planar uniform laws, and identify useful lower-order sufficient conditions.",
+  "failure": "The unbounded-order hypothesis is inconsistent with published finite planar reconstruction bounds. The 18-point oriented theorem must not be mistaken for a reflection-invariant distance theorem. The restricted complementary half-set search through grid order 26 found no candidate; this does not establish universal four-point sufficiency.",
+  "correction": "Use the published 36-point isometry upper bound for uniform finite sets via the exact iid distance law to deck conversion. A unique scalene triangle anchors coordinates and gives a four-point sufficient condition; a unique diameter leaves a four-element sign group whose first three symmetrized tensors recover the law, giving a five-point sufficient condition.",
+  "transfer": "Before increasing observation order, identify the residual symmetry after conditioning on an informative reference configuration. Derive how joint observations remove that symmetry, distinguish known general bounds from new restricted derivations, and retain unsuccessful searches.",
+  "limits": "Exact uniform finite planar sets; unique-diameter weighted extension only within known unique-diameter class. 84 bounded anchored cases and 252 signature checks; negative complement search is restricted. No optimality, general five-point sufficiency, noise stability, independent review or novelty claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/82d8bc0a0c03a222230adfd2a9c7f9e0aa3f1f92/polygon-lattice-walks/R22/TOTO_RESEARCH_SPARKS_R22.md",
+    "visibility": "public",
+    "revision": "82d8bc0a0c03a222230adfd2a9c7f9e0aa3f1f92"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
