@@ -1,0 +1,24 @@
+{
+  "id": "toto-review-blindness-audit-coverage-20261127-r35",
+  "title": "Rule revisability does not guarantee evidence coverage",
+  "mechanisms": [
+    "selective-labels",
+    "observational-equivalence",
+    "rule-review",
+    "independent-audit",
+    "minimax-sampling"
+  ],
+  "problem": "Owner stated that no rule is sacred and all rules and reviewers require periodic review as knowledge grows. Can a review discover defects if the incumbent rule determines which labels are observable?",
+  "failure": "Two worlds can share identical accepted labels and decisions but reverse the relative quality of the incumbent and candidate rule. Repeating review on the same admitted region cannot resolve this.",
+  "correction": "Separate permission to revise from observability. Audit the excluded region with independently determined labels; under fixed finite population and perfect audit assumptions, uniform sampling without replacement attains minimax miss probability C(N-m,d)/C(N,d). Detection is not proof that a replacement rule is superior.",
+  "transfer": "Predeclare review coverage, preserve rejected evidence and versions, quantify detection power, and evaluate a proposed revision with separate representative evidence. No observed error is not proof of correctness.",
+  "limits": "Fixed binary truth labels, unit misclassification loss, safe perfect audit of excluded items, known finite sampling frame, equal costs. 2916 label completions, 7638 exact subset checks, six audit-budget boundaries; adaptive minimax extension derived separately. No production, religious-historical, empirical, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/1cc9ea6cf291ab08bbfc7d555a0bc85e215c7f46/polygon-lattice-walks/R35/TOTO_RESEARCH_SPARKS_R35.md",
+    "visibility": "public",
+    "revision": "1cc9ea6cf291ab08bbfc7d555a0bc85e215c7f46"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
