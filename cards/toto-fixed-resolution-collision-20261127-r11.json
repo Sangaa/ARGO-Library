@@ -1,0 +1,26 @@
+{
+  "id": "toto-fixed-resolution-collision-20261127-r11",
+  "title": "A fixed observation tolerance can change the decay exponent of collisions",
+  "mechanisms": [
+    "local-limit-theorem",
+    "finite-resolution",
+    "collision-probability",
+    "observation-model",
+    "asymptotic-scope",
+    "دقة الرصد",
+    "احتمال الالتقاء"
+  ],
+  "problem": "Compare exact endpoint equality with fixed positive-radius coincidence for the regular octagonal random walk.",
+  "failure": "Worst-case separation alone does not quantify collision probability. Substituting a shrinking radius into a fixed-radius limit would be an unjustified extension; R11 does not establish such a limit. This is a scope warning, not a recorded failed physical experiment.",
+  "correction": "Weight endpoint differences by exact path multiplicities; check the nonlattice characteristic-function condition; apply Stone's established multivariate local limit theorem for each fixed positive radius. Verify finite-size counts using independent dynamic programming on a bounded window.",
+  "transfer": "In observation and inverse problems, define the event and measurement tolerance before interpreting a scaling exponent. Exact equality, worst-case distinguishability and typical approximate coincidence are different statistics. Do not extrapolate fixed-parameter limits to varying parameters without a uniform theorem.",
+  "limits": "For the regular unit octagon, C_0(n) is asymptotic to 2/(pi^2 n^2), while C_r(n) is asymptotic to r^2/(2n) for fixed r>0. Exact local checks through n=160 for selected radii; no independent review, novelty claim, physical dimension inference or uniform shrinking-radius result. The 1/8-radius data have substantial finite-size deviations.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/bd9f2a3a9ff627bfb2e58915ca72b523cfeb0c76/pascal-singmaster/toto-sparks/R11/TOTO_RESEARCH_SPARKS_R11.md",
+    "visibility": "public",
+    "revision": "bd9f2a3a9ff627bfb2e58915ca72b523cfeb0c76"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO; established local limit theorem credited to Charles Stone in source",
+  "extractor": "TOTO"
+}
