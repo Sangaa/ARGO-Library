@@ -1,0 +1,27 @@
+{
+  "id": "toto-critical-scale-phase-20261127-r12",
+  "title": "A fixed dimensionless parameter need not determine a unique scaling limit",
+  "mechanisms": [
+    "asymptotic-scope",
+    "scale-phase",
+    "pell-units",
+    "subsequences",
+    "counterexample",
+    "observation-threshold",
+    "تغير المقياس",
+    "حدود التعميم"
+  ],
+  "problem": "Determine whether the regular octagon's approximate-to-exact collision ratio has a unique limit when n*r^2=1.",
+  "failure": "R11 proposed n*r^2 as a candidate crossover variable, not a theorem. R12 disproves sufficiency in the sharp disk model: two adjacent-integer subsequences have distinct limits even with the variable fixed exactly.",
+  "correction": "Use the Pell-unit automorphism of the even lattice to renormalize the observation disk; prove summable bounds for the local-limit terms; retain the boundary contribution. The exact difference of the two limits is 8/e.",
+  "transfer": "Before accepting a one-parameter scaling collapse, inspect hidden arithmetic scale phases and construct subsequences approaching an observation boundary from both sides. Separate a proven jump from numerical estimates of each limiting value.",
+  "limits": "Author-derived result for the regular unit octagon at r=1/sqrt(n) with a sharp closed-disk cutoff. Six exact finite-size counts, 2401 bounded unit checks; truncated Gaussian sums are numerical proxies without certified decimal error. No independent validation, novelty assessment, physical interpretation or general smoothing result.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/b623244d14c64a109595066a3439e2c4b8e78730/pascal-singmaster/toto-sparks/R12/TOTO_RESEARCH_SPARKS_R12.md",
+    "visibility": "public",
+    "revision": "b623244d14c64a109595066a3439e2c4b8e78730"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
