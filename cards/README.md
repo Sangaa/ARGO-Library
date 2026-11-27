@@ -32,3 +32,5 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [R06 — berth release versus channel queue coupling](berth-release-event-boundary-channel-coupling-20261127-r06.json) — owner-reported scope correction; non-canonical.
 
 - [R07 — finite holding capacity and upstream back-pressure](finite-holding-capacity-backpressure-20261127-r07.json) — owner-reported analogy; bounded deterministic example; non-canonical.
+
+- [Temporary augmentation — exact return condition](exact-return-temporary-augmentation-20261127.json) — owner-reported puzzle, exact arithmetic; non-canonical.

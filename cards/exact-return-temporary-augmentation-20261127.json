@@ -1,0 +1,24 @@
+{
+  "id": "exact-return-temporary-augmentation-20261127",
+  "title": "Temporary augmentation works only when its exact remainder is returnable",
+  "mechanisms": [
+    "temporary-augmentation",
+    "integer-allocation",
+    "conservation-invariant",
+    "reversible-operation",
+    "cross-domain-analogy"
+  ],
+  "problem": "The owner connected a temporary empty cup/variable used during transfer with the seven-camels puzzle: split seven indivisible units into one-half of the augmented total, half of that first share, and half of the second share, then return the added camel.",
+  "failure": "Without converting the sequential shares to fractions of one common augmented total, the allocation can look fractional or appear to consume the temporary unit.",
+  "correction": "The shares of the same augmented total are 1/2, 1/4, and 1/8, summing to q=7/8. For original total M and temporary addition b, exact return requires q(M+b)=M, so b=M(1-q)/q. With M=7, b=1; the augmented total is 8, shares are 4, 2, and 1, and the residual 1 is returned. Whole-unit use also requires b and every share amount to be integers.",
+  "transfer": "For a temporary resource operation, name the starting invariant, the temporary addition, the transformation, and the exact residual required to restore the original state. Remove the temporary resource only after the conservation and divisibility checks pass. In physical systems such as ship holding, a buffer is occupied over time and can cause backpressure; it is not a freely borrowed mathematical unit.",
+  "limits": "This is an owner-provided illustrative puzzle and an elementary conservation identity, not an original allocation algorithm. It does not justify treating real capacity as temporary or available. Experience remains non-canonical.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f3d256328d51dbeda5ca8b9b9dcb22217500c1b8/temporary-resource-augmentation/README.md",
+    "visibility": "public",
+    "revision": "f3d256328d51dbeda5ca8b9b9dcb22217500c1b8"
+  },
+  "status": "USER_REPORTED",
+  "author": "Owner's cross-domain analogy; TOTO exact derivation",
+  "extractor": "TOTO"
+}
