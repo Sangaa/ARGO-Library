@@ -15,3 +15,4 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [R01 — berth-buffer placement](robust-berth-buffer-placement-20261127-r01.json)
 - [Review participant and session provenance](review-participant-provenance-20261127.json)
 - [Relocation link and round-label checks](research-relocation-reference-checks-20261127.json)
+- [Self-derived queries measure nothing](retrieval-selfderived-query-20261127.json)

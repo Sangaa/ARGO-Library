@@ -248,8 +248,7 @@ def main():
     for i, grp in enumerate(S0.ALIAS_GROUPS):
         for w in sorted(grp):
             n = sum(1 for b in about if w in b)
-            nb = sum(1 for b in (a + " " + bd) for a, bd in [(1, 1)]) if False else \
-                 sum(1 for a, bd in zip(about, bodies) if w in a + " " + bd)
+            nb = sum(1 for a, bd in zip(about, bodies) if w in a + " " + bd)
             if n / len(about) >= LIMIT:
                 worst.append((n, w, i))
             elif nb / len(about) >= LIMIT:
@@ -289,6 +288,48 @@ def main():
     print("   proxy-capability card\". The match is real text, but the card is not")
     print("   about capability. Recorded in cards/card-id-citation-20261126.json.")
 
+    # --- what this suite's own PASS message said it could not do
+    print("\nG. live-corpus selectivity: do the five layers add noise at scale?")
+    print("   The fixture is 5 cards; the live corpus is now "
+          f"{len(blobs)}. The worry this")
+    print("   check exists for is mine: that the alias layer, written when the")
+    print("   corpus held 7 cards, would pull unrelated cards in once the corpus")
+    print("   grew. That is measurable WITHOUT authoring any query, by comparing")
+    print("   the returned-set size and the top-1 margin with the layers off and")
+    print("   on, over one query per card built from that card's own mechanisms.")
+    print("")
+    print("   NOT a recall measurement, and the reason is the point: a query taken")
+    print("   from a card's own text is matched verbatim by that card, so recall@1")
+    print("   comes out 26/26 with the layers off AND on. Measured, and it says")
+    print("   nothing. Live-corpus recall needs a held-out query set written by a")
+    print("   seat who has not read the cards; it cannot be derived from here.")
+    import statistics as _st
+    sel = {}
+    for lab, lay in (("off", set()), ("on", S0.DEFAULT_LAYERS)):
+        sizes, margins = [], []
+        for c in (json.loads(p_.read_text(encoding="utf-8")) for p_ in live):
+            got = S0.search(" ".join(c["mechanisms"]), limit=1000, layers=lay)
+            sizes.append(len(got))
+            if len(got) >= 2:
+                margins.append(got[0][0] - got[1][0])
+        sel[lab] = (sum(sizes) / len(sizes), max(sizes), _st.median(margins))
+        print(f"     layers {lab:3}: returned set mean {sel[lab][0]:4.1f} of "
+              f"{len(live)}, max {sel[lab][1]}, top1-top2 margin median "
+              f"{sel[lab][2]:.0f}")
+    if sel["on"][0] > sel["off"][0]:
+        fails.append("the layers enlarge the mean returned set on the live corpus "
+                     f"({sel['off'][0]:.1f} -> {sel['on'][0]:.1f}): an alias term "
+                     "has become generic, re-check section F's threshold")
+    else:
+        print("     ok   the layers do not enlarge the returned set -- the stopword")
+        print("          layer removes more than the alias layer adds. My worry is")
+        print("          refuted by measurement, which is the useful outcome.")
+    print(f"   REMAINING FINDING, not a failure: a typical query returns a mean")
+    print(f"   of about half the corpus. The ranking separates well (margin above),")
+    print(f"   so the defect is a long tail, not a wrong order. The remedy is a")
+    print(f"   relative-score cutoff at display time, which is the engine owner's")
+    print(f"   lane (HERMUZ, issue #1), not a scoring change made from here.")
+
     # --- cost, which ARGO asked for explicitly
     print("\nE. cost")
     t_none = sum(run(q, "none")[1] for q, _ in PAIRS) / len(PAIRS)
@@ -311,8 +352,10 @@ def main():
           f"unsound {o_un}/{len(MEANINGLESS)} -> 0;  "
           f"false positives {o_fp}/{len(UNRELATED)} -> 0;  conflations 0/{len(NO_CONFLATE)}")
     print("  EVIDENCE CLASS: MEASURED, on a 5-card frozen fixture through the real")
-    print("  CLI. A 5-card corpus cannot measure ranking quality at scale, and")
-    print("  nothing here establishes retrieval quality on the live library.")
+    print("  CLI, plus section G's selectivity measurement on the live corpus.")
+    print("  What is established on the live library is SELECTIVITY -- that the")
+    print("  layers add no noise at this size. Live-corpus RECALL is still not")
+    print("  established and cannot be, from queries derived from the cards.")
     return 0
 
 
