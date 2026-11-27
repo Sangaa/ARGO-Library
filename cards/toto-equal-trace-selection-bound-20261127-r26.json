@@ -1,0 +1,25 @@
+{
+  "id": "toto-equal-trace-selection-bound-20261127-r26",
+  "title": "Equal trace aligns planar design objectives but does not make greedy selection exact",
+  "mechanisms": [
+    "equal-trace",
+    "directional-complementarity",
+    "E-optimality",
+    "D-optimality",
+    "greedy-selection",
+    "sharp-bound"
+  ],
+  "problem": "Determine whether equal information capacity per source removes the arbitrary failure of E-greedy selection in R25.",
+  "failure": "Equal trace does not make greedy selection optimal, even with two choices and strictly positive definite groups. Conversely, the unequal-trace arbitrary-failure example must not be transferred unchanged to the equal-trace model.",
+  "correction": "Represent each planar equal-trace matrix by its traceless imbalance vector. E, D and inverse-trace A rankings coincide at fixed cardinality. With an isotropic positive baseline and budget two, greedy achieves at least one quarter of optimal E gain above baseline; an explicit rational family approaches the quarter ratio.",
+  "transfer": "Recheck guarantees when resource constraints change. Separate equal aggregate capacity from directional distribution, and use exact small-instance comparisons plus a worst-case construction.",
+  "limits": "Two-dimensional independent additive PSD information, equal trace and equal group costs; isotropic baseline for the two-choice bound. 85320 exact disk-grid triple comparisons and eight rational sharp-family examples. Common trace grows across sharpness instances. No larger-budget, arbitrary baseline ratio, correlated-noise, physical, organizational, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/d92e5c021e421f0c0635bcdf3595ab3751e58444/polygon-lattice-walks/R26/TOTO_RESEARCH_SPARKS_R26.md",
+    "visibility": "public",
+    "revision": "d92e5c021e421f0c0635bcdf3595ab3751e58444"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
