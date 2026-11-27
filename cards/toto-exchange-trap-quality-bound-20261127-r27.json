@@ -1,0 +1,24 @@
+{
+  "id": "toto-exchange-trap-quality-bound-20261127-r27",
+  "title": "Depth of a local exchange trap is distinct from its objective loss",
+  "mechanisms": [
+    "local-search",
+    "exchange-barrier",
+    "equal-trace",
+    "directional-complementarity",
+    "quality-guarantee"
+  ],
+  "problem": "Determine whether improving an equal-capacity planar information design by bounded-size exchanges necessarily reaches a global optimum.",
+  "failure": "For every q there is a strictly positive definite equal-trace instance with k=q+1 selected groups in which every exchange of up to q groups strictly worsens the objective, but replacing all k improves it. The gain in this construction shrinks with q; it is not an arbitrary relative-loss result.",
+  "correction": "Separate escape radius from objective quality. In the same independent additive model, true one-exchange local optima with k>=3 achieve at least 1-(sqrt(1+4k)-1)/k of optimal gain above an isotropic baseline, with a separate quarter bound for k=2. Consider larger exchanges or nonmonotone exploration when exact optimality matters.",
+  "transfer": "Distinguish resistance to incremental change from the value of the achievable improvement. Test escape strategies against an exact small-instance baseline, and validate actual information independence before organizational application.",
+  "limits": "Planar equal-trace PSD groups, equal costs, isotropic baseline; repeated matrix values represent separate independent source identities. Nine rational trap instances and 516 exact count-pattern checks; 1050 small selection cases, 208 local, 38 nonoptimal. General k bound tested numerically, separately derived, not claimed sharp. No algorithm runtime, correlated-error, organizational, physical, originality or independent-validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e0c173c9b848704dad1d7ee3cc9c406ba833a916/polygon-lattice-walks/R27/TOTO_RESEARCH_SPARKS_R27.md",
+    "visibility": "public",
+    "revision": "e0c173c9b848704dad1d7ee3cc9c406ba833a916"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
