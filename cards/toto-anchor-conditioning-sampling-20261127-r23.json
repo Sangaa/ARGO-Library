@@ -1,0 +1,26 @@
+{
+  "id": "toto-anchor-conditioning-sampling-20261127-r23",
+  "title": "Reference uniqueness, inverse conditioning and sampling cost are distinct",
+  "mechanisms": [
+    "inverse-identification",
+    "trilateration",
+    "conditioning",
+    "symmetry-breaking",
+    "sampling-cost",
+    "bounded-noise",
+    "reference-selection"
+  ],
+  "problem": "Determine whether the unique triangle sufficient condition in R22 also guarantees stable or economical reconstruction.",
+  "failure": "A unique triangle can have a uniformly separated distance signature while its known-anchor inverse gain diverges as its height tends to zero. Exact identifiability does not establish noise robustness or cheap sampling.",
+  "correction": "Separate signature separation, conditional inverse conditioning and reference-event availability. For fixed known anchors (0,0),(L,0),(c,h), 0<c<L, the sharp vertical gain of the squared-distance subtraction inverse over the bounded-error cube is 1/h. Use a better-conditioned unique reference when available. In the uniform N-point, unique-triangle procedure, independent quadruples hit a specified target with the reference with probability 6/N^4; the union bound gives a sufficient sample count.",
+  "transfer": "Evaluate reference selection separately for recognition, error amplification and availability. Do not interpret anchored-coordinate instability as global shape instability modulo isometries. Retain the measurement noise and sampling model when making comparisons.",
+  "limits": "R23 assumes known exact labeled anchor coordinates and bounded additive squared-distance errors for its linear inverse. Ten heights and 160 exact noise-vertex checks. Rare-reference count is a sufficient bound for one independent-quadruple procedure, not a lower bound for all reconstruction methods. No full noisy-deck algorithm, physical measurement, global shape instability, optimality, independent review or originality claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/daa68c0606aa89bdeb4439e59e98d8c4f20e6d50/polygon-lattice-walks/R23/TOTO_RESEARCH_SPARKS_R23.md",
+    "visibility": "public",
+    "revision": "daa68c0606aa89bdeb4439e59e98d8c4f20e6d50"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
