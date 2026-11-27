@@ -30,3 +30,5 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [HORUS — internal analytic-agent provenance for berth R05](horus-internal-analytical-review-channel-robust-berth-r05-20261127.json)
 
 - [R06 — berth release versus channel queue coupling](berth-release-event-boundary-channel-coupling-20261127-r06.json) — owner-reported scope correction; non-canonical.
+
+- [R07 — finite holding capacity and upstream back-pressure](finite-holding-capacity-backpressure-20261127-r07.json) — owner-reported analogy; bounded deterministic example; non-canonical.

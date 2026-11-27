@@ -1,0 +1,24 @@
+{
+  "id": "finite-holding-capacity-backpressure-20261127-r07",
+  "title": "A temporary buffer separates queues only while capacity remains",
+  "mechanisms": [
+    "temporary-buffer",
+    "finite-capacity",
+    "queue-backpressure",
+    "event-semantics",
+    "cross-domain-analogy"
+  ],
+  "problem": "The owner described an empty cup or variable used temporarily to transfer contents while retaining some in the original. In the berth/channel model, an off-berth holding area plays a similar temporary-buffer role, but its finite capacity can make downstream channel delays feed back to the berth.",
+  "failure": "Treating external holding as either unlimited or unavailable misses the intermediate case. A holding area can preserve handling-completion times while the last vessel still occupies the berth waiting for a free place.",
+  "correction": "In a deterministic three-vessel example with first channel entry at T=10 and one channel entry per time unit, K=0 or K=1 delayed the third handling completion; K=2 preserved all handling-completion times but delayed the last berth release to time 10; K=3 cleared all ships from the berth by time 3. Under the report's stricter general assumptions, K>=N-1 preserves all N handling completions, while K>=N is needed to clear all N before T.",
+  "transfer": "For any staged process, identify the temporary buffer, its capacity, and which event frees a slot. Separate processing completion from release and final exit. When the buffer fills, downstream waiting may propagate upstream.",
+  "limits": "The analogy is owner-reported. Numeric results are from a deterministic toy model with fixed order, unit service, no transfer time, and no port data. No port procedure, operational recommendation, or originality claim is established; experience remains non-canonical.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/c4fa55f49ecc3caaff08d95ef87a289b41d64df1/robust-berth-buffer-allocation/R07/FINITE_HOLDING_CAPACITY_BACKPRESSURE_R07.md",
+    "visibility": "public",
+    "revision": "c4fa55f49ecc3caaff08d95ef87a289b41d64df1"
+  },
+  "status": "USER_REPORTED",
+  "author": "Owner analogy; TOTO bounded derivation",
+  "extractor": "TOTO"
+}
