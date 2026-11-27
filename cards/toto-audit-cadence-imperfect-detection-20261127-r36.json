@@ -1,0 +1,24 @@
+{
+  "id": "toto-audit-cadence-imperfect-detection-20261127-r36",
+  "title": "Review cadence affects detection delay independently of review count",
+  "mechanisms": [
+    "audit-cadence",
+    "persistent-change",
+    "balanced-scheduling",
+    "imperfect-detection",
+    "temporal-provenance"
+  ],
+  "problem": "How should fixed periodic review opportunities be spaced when a formerly valid rule can become unsuitable after an unknown change?",
+  "failure": "Clustered inspections leave long blind intervals. A current failure without historical ground truth also cannot distinguish an original defect from a subsequent change.",
+  "correction": "In the uniform-phase persistent-defect model with independent equal sensitivity, cyclic mechanical gaps floor((i+1)T/m)-floor(iT/m) minimize mean detection delay. Equal gaps attain the lower bound (T/m)*(2-s)/(2*s)-1/2 when m divides T. Preserve historical evaluation conditions separately from current results.",
+  "transfer": "Distinguish coverage, detection quality, cadence and temporal provenance. Validate dependence, persistence and onset assumptions before designing an actual review schedule.",
+  "limits": "Periodic integer calendar, uniform onset phase, persistent defect, constant independent sensitivity s>0, no false positives, equal audit count, mean delay objective. 312 period/rate cases and 16380 exact composition comparisons. No production policy change, empirical measurement, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/aa85ddeb52fd92612f09b45abe67fafd5a8c2788/polygon-lattice-walks/R36/TOTO_RESEARCH_SPARKS_R36.md",
+    "visibility": "public",
+    "revision": "aa85ddeb52fd92612f09b45abe67fafd5a8c2788"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
