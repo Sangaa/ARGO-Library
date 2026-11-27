@@ -1,0 +1,24 @@
+{
+  "id": "bounded-api-projection",
+  "title": "Project only needed fields in bounded retrieval",
+  "mechanisms": [
+    "bounded retrieval",
+    "field projection",
+    "response-size measurement",
+    "evidence limits"
+  ],
+  "problem": "A bounded API read can expose a serialized response larger than the fields needed for the task.",
+  "failure": "The measured size gap cannot be assigned to metadata alone; it includes omitted fields, response structure, and JSON serialization. The compared units were UTF-8 serialized content strings, not network bytes or model tokens.",
+  "correction": "Compare a defined tool-exposed content string with an explicit minimal-field projection. Measure both with the same UTF-8 byte-counting method, and describe the full response-shape difference rather than attributing it to one field category.",
+  "transfer": "For each sampled response shape, the projected UTF-8 string was roughly two-fifths the size of the corresponding unprojected content. Treat this as a bounded pilot observation; measure each route and task rather than reusing it as a universal savings factor.",
+  "limits": "Small, route-specific observation. It does not measure network transport, model tokens, user-interface memory, cause of conversation termination, or production performance. It establishes no causal or general platform explanation. The source link is a public tracking reference, not the measurement evidence; exact provenance remains private.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Library/issues/1",
+    "visibility": "explicitly-cleared",
+    "role": "public tracking reference"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "unattributed source contributor",
+  "extractor": "automated extraction",
+  "verifier": "independent bounded measurement replay; separate prepublication privacy review completed"
+}
