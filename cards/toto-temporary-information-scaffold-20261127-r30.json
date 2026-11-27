@@ -1,0 +1,24 @@
+{
+  "id": "toto-temporary-information-scaffold-20261127-r30",
+  "title": "Temporary information can remove a transition floor barrier without becoming part of the final design",
+  "mechanisms": [
+    "transition-barrier",
+    "auxiliary-capacity",
+    "PSD-addition",
+    "directional-complementarity",
+    "minimax-path"
+  ],
+  "problem": "Can relaxing fixed cardinality through one independently measured temporary reference keep the original E-score floor during the R28 exchange path?",
+  "failure": "The fixed-cardinality graph makes the R27 trap unavoidable by monotone single swaps. Increasing batch radius is not the only possible relaxation. However, maintaining the initial score floor is weaker than maintaining stepwise monotonic improvement.",
+  "correction": "On a fixed finite state graph, the minimum sufficient isotropic addition delta I is delta=B, the minimax loss. Any feasible PSD addition has trace at least B. In the R28 family a full balanced extra group I suffices, and a rank-one directional addition has an exact rational threshold approaching half the minimum isotropic trace.",
+  "transfer": "Evaluate temporary support separately from final configuration and batch size. Target missing information, quantify required support and verify removal against the original floor. Real applications require independent measurement and actual activation, cost and safety models.",
+  "limits": "Additive independent PSD matrices; support retained during discrete original-graph transitions. R28-specific direction optimum, not exact arbitrary-direction optimum. 16768 exact state checks and 256 connectivity checks. No physical, organizational, financial, instantaneous transition system, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f4cf1014212e1d2a81cd204fdd98ec3244efc981/polygon-lattice-walks/R30/TOTO_RESEARCH_SPARKS_R30.md",
+    "visibility": "public",
+    "revision": "f4cf1014212e1d2a81cd204fdd98ec3244efc981"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
