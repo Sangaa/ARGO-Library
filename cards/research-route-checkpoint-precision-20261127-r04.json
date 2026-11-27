@@ -8,9 +8,9 @@
     "checkpoint-evidence"
   ],
   "problem": "Publish a new research round so its derivation is discoverable and its checkpoint records only time precision supported by evidence.",
-  "failure": "R04's route initially listed its certificate and supporting notes but omitted its central derivation from the lane's Rounds section. A checkpoint heading also used `18:xx UTC`, a placeholder that was not an observed clock time.",
-  "correction": "HORUS review caught the missing derivation link; add it under Rounds and read it back from the proposed branch. Preserve the timestamp mistake but append an explicit correction: the date is known, exact time unavailable. Keep session and task identifiers UNKNOWN/UNREGISTERED when the runtime does not expose them.",
-  "transfer": "Before closing a research round, read back each route link against its target file. Record only measured timestamp precision; when a placeholder slips into an artifact, correct it append-only and label its evidence status.",
+  "failure": "R04's derivation was initially omitted from the lane's Rounds list. The first Library-card branch added both files but its index edit matched the wrong R02/R03 label, so the card index still omitted them at first readback. A checkpoint heading also used `18:xx UTC`, a placeholder rather than an observed clock time.",
+  "correction": "HORUS review caught the missing derivation route; add it under Rounds and read the target back. The first Library index readback exposed the missed card-list insertion; add both exact card filenames and verify the rows. Preserve the timestamp mistake append-only and state that the date is known but exact time unavailable. Keep session/task identifiers UNKNOWN/UNREGISTERED when not exposed.",
+  "transfer": "After writing files, verify each exact index row points to a readable target before claiming discoverability. Record only measured timestamp precision; if a placeholder slips into a record, preserve the original and append a correction with evidence status.",
   "limits": "Observed in one ARGO-Research R04 route and checkpoint. The correction establishes the facts of that documentation incident only; it does not validate a universal process improvement or promote a governance rule.",
   "source": {
     "url": "https://github.com/Sangaa/ARGO-Research/blob/f66403aead4f6f7f07690b690adb1046fec56bee/robust-berth-buffer-allocation/R04/DEVELOPMENT_LOG.md",
