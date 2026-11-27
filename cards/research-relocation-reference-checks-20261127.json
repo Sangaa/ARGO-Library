@@ -1,0 +1,24 @@
+{
+  "id": "research-relocation-reference-checks-20261127",
+  "title": "Check path-dependent references and round labels after relocation",
+  "mechanisms": [
+    "file-relocation",
+    "relative-links",
+    "round-identifiers",
+    "research-provenance"
+  ],
+  "problem": "Moving a group of research files changes the base path used by relative links and can expose stale labels in neighboring records.",
+  "failure": "After moving R09, its relative review link resolved to a missing root-level target. R18's markdown heading said R17 despite being the R18 record.",
+  "correction": "Repair the R09 link to the actual Pascal-review record; correct the R18 heading label. Keep both original blob versions in Git history and state the two prose-only corrections in the route map.",
+  "transfer": "Before finalizing a research-file move, scan all relative links from each new location, reconcile folder/filename/heading round IDs, compare blob hashes to separate pure moves from edits, and preserve provenance for every correction.",
+  "limits": "These are two bounded defects observed in one relocation. The check does not replace subject review, certificate verification, or a separate freeze/provenance protocol.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e4d01c671d798a0898c54ed6ad84602fbcee932a/polygon-lattice-walks/README.md",
+    "visibility": "public",
+    "revision": "e4d01c671d798a0898c54ed6ad84602fbcee932a"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "TOTO; HORUS identified the broken link during review",
+  "extractor": "TOTO",
+  "verifier": "HORUS (read-only relocation review)"
+}
