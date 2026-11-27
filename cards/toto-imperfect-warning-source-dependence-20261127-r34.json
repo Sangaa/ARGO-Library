@@ -1,0 +1,24 @@
+{
+  "id": "toto-imperfect-warning-source-dependence-20261127-r34",
+  "title": "Rumor reliability, behavioral impact and source dependence must be separated",
+  "mechanisms": [
+    "imperfect-warning",
+    "Bayesian-decision",
+    "robust-feasibility",
+    "source-dependence",
+    "information-timing"
+  ],
+  "problem": "Owner asked how R33's ideal warning model handles rumors or leaks.",
+  "failure": "Treating a rumor as a perfect warning can remove mandatory reserve unsafely; treating repeated copies as independent evidence can inflate confidence from one half to 256/257 in the modeled example.",
+  "correction": "Separate robust zero-shortfall from expected-loss decisions, trace copies to their source, and use posterior risk only under explicitly allowed risk criteria. A false claim may affect behavior, but this causal mechanism is a separate untested hypothesis in R34.",
+  "transfer": "Assess source lineage, timing, correctness and actual decision impact separately. Compare an early imperfect signal to a decision-deadline baseline. Do not infer truth from public response or treat rumor labels as calibrated probabilities.",
+  "limits": "Exogenous binary event, known model probabilities, binary preparation, fixed costs, zero signal cost. 14641 exact finite decision cases and duplicate-signal example. No actual rumor calibration, financial recommendation, causal behavior experiment, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/c33cece690f53b591b5e0bcdc66e5b1447386829/polygon-lattice-walks/R34/TOTO_RESEARCH_SPARKS_R34.md",
+    "visibility": "public",
+    "revision": "c33cece690f53b591b5e0bcdc66e5b1447386829"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
