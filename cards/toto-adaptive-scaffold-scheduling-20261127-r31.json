@@ -1,0 +1,25 @@
+{
+  "id": "toto-adaptive-scaffold-scheduling-20261127-r31",
+  "title": "Peak temporary capacity, active duration and cumulative support are separate objectives",
+  "mechanisms": [
+    "transition-barrier",
+    "adaptive-scaffold",
+    "layer-lower-bound",
+    "minimax-path",
+    "cumulative-resource",
+    "objective-mismatch"
+  ],
+  "problem": "Can adjusting temporary directional information along the R30 transition path reduce cumulative usage while preserving the initial E-score floor?",
+  "failure": "Keeping a fixed peak scaffold through every active state overstates required cumulative support when deficits vary. Conversely, a peak-minimizing path need not minimize cumulative cost in a general graph, and in the R27 trap no intermediate state can dispense with all support.",
+  "correction": "Use pointwise required rank-one support W. Every single-exchange path visits every target-count layer, so layer minima lower-bound peak, cumulative and active-visit objectives; one path attains all three in this family. Adaptive cumulative usage tends to one third of fixed peak usage over q active visits. Sequential compatible nonoverlapping paths can conditionally reuse peak capacity, but cumulative use adds.",
+  "transfer": "Separate peak resource availability, duration and cumulative consumption. Size support to actual deficit and verify removal against the floor. Model switching, latency, incompatible directions, overlapping needs and uncertainty explicitly before applying to operations.",
+  "limits": "Specific R27-R30 equal-trace independent-information model, discrete single swaps, fixed support direction, variable magnitude, unit-duration state visits, no switching or ramp constraint. 128 cases, 16768 states, 384 shortest-path objective checks; additional abstract objective-mismatch graph. Decimal ratios numerical proxies. No real energy, financial, organizational, physical, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/5b99116d208bb40f0e7e30d6773960657f9760b7/polygon-lattice-walks/R31/TOTO_RESEARCH_SPARKS_R31.md",
+    "visibility": "public",
+    "revision": "5b99116d208bb40f0e7e30d6773960657f9760b7"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
