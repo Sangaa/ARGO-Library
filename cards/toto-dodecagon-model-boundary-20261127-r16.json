@@ -1,0 +1,26 @@
+{
+  "id": "toto-dodecagon-model-boundary-20261127-r16",
+  "title": "Equal algebraic rank does not determine an observation lattice or norm spectrum",
+  "mechanisms": [
+    "cyclotomic-field",
+    "observation-lattice",
+    "prime-splitting",
+    "unit-orbits",
+    "model-scope",
+    "حدود التعميم",
+    "طيف المدارات"
+  ],
+  "problem": "Transfer the octagonal arithmetic spectrum method to a regular dodecagonal walk.",
+  "failure": "Copying the octagon's parity lattice, unit period, or prime factors to the dodecagon would give incorrect spectra. Equal algebraic rank does not imply equal observation models.",
+  "correction": "Derive the step difference lattice, field embeddings and unit subgroup anew. Apply classical prime splitting and class number one, then compare with completeness-bounded direct enumeration including zero classes.",
+  "transfer": "When generalizing a structural theorem to a new geometry, preserve the method but rederive lattice support, covariance, symmetry group and algebraic field. Test both positive and zero coefficients.",
+  "limits": "R16 compares two specified unit polygon walks; exact norm comparisons through 2000 and 2401 unit checks. Bessel and phase values numerical proxies, no certified quadrature/tail or finite-time simulation, inverse uniqueness, independent review, physical or novelty claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/ff4f42c46bc69f6f0a98f4be6c53a665c8c1d743/pascal-singmaster/toto-sparks/R16/TOTO_RESEARCH_SPARKS_R16.md",
+    "visibility": "public",
+    "revision": "ff4f42c46bc69f6f0a98f4be6c53a665c8c1d743"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
