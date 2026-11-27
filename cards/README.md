@@ -14,5 +14,6 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [Research subject versus storage path](research-lane-subject-vs-path-20261127.json)
 - [R01 — berth-buffer placement](robust-berth-buffer-placement-20261127-r01.json)
 - [R02 — vessel-specific delay caps](robust-berth-vessel-specific-caps-20261127-r02.json)
+- [R03 — nonuniform gap costs and primal-dual checks](robust-berth-weighted-gap-costs-20261127-r03.json)
 - [Review participant and session provenance](review-participant-provenance-20261127.json)
 - [Relocation link and round-label checks](research-relocation-reference-checks-20261127.json)

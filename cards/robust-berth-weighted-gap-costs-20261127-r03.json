@@ -1,0 +1,26 @@
+{
+  "id": "robust-berth-weighted-gap-costs-20261127-r03",
+  "title": "Nonuniform gap costs can overturn a unit-cost buffer placement",
+  "mechanisms": [
+    "weighted-buffer-cost",
+    "interval-covering-lp",
+    "total-unimodularity",
+    "primal-dual-certificate",
+    "robust-scheduling",
+    "research-error-capture"
+  ],
+  "problem": "For a fixed vessel order on one berth with endpoint-specific delay caps, determine whether the R02 minimum-total-buffer placement remains optimal when each idle gap has a different nonnegative linear cost.",
+  "failure": "The R02 unit-cost placement [0,0,3] is feasible in the three-vessel witness but costs 30 at gap prices (1,10), while [0,3,0] costs 3. The first local certificate run also stopped before assertions due to a helper-call arity error. HORUS review then found that the initial finite certificate compared primal and dual values without asserting dual capacity feasibility.",
+  "correction": "Formulate positive R02 interval demands as min c^T g subject to Mg>=w and g>=0. The dual packs valued intervals subject to each gap's price capacity. Consecutive-ones total unimodularity gives an integral primal optimum for integer demands. In the witness, assert both dual capacity constraints and matching primal/dual objective values; preserve and log the earlier harness failure.",
+  "transfer": "Do not carry optimality across a change in the objective weights. Re-formulate the weighted objective, and check primal feasibility, dual feasibility, and matching values before using a primal-dual witness.",
+  "limits": "One berth, fixed sequence, rectangular bounded arrival and handling uncertainty, endpoint-specific caps, and nonnegative linear per-gap costs. The executable certificate checks one three-vessel example and 43 bounded integer placements; it does not verify the general TU theorem or provide a general optimizer. Weighted buffer scheduling is established; the exact specialization's novelty remains unresolved. No operational data or human peer review.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/6bb3a345f4ee0ebadd1062a952953127bd68e9a8/robust-berth-buffer-allocation/R03/ROBUST_BERTH_BUFFER_R03.md",
+    "visibility": "public",
+    "revision": "6bb3a345f4ee0ebadd1062a952953127bd68e9a8"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS internal analytical collaboration agent; bounded model-side review"
+}
