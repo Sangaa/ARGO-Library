@@ -1,0 +1,26 @@
+{
+  "id": "toto-dodecagon-phase-variation-20261127-r18",
+  "title": "R18 certifies nonconstant dodecagonal Gaussian phase",
+  "mechanisms": [
+    "polygon-lattice-walk",
+    "cyclotomic-embeddings",
+    "gaussian-lattice-sum",
+    "scale-phase",
+    "rational-intervals",
+    "summable-tail"
+  ],
+  "problem": "R16 derived a limiting phase function for the regular dodecagonal walk, but its phase values were proxies. The open question was whether the function is nonconstant.",
+  "failure": "Floating phase samples or a numerical Bessel mean do not establish nonconstancy of an infinite sum.",
+  "correction": "Compare the function at t=1 and t=sqrt(lambda), with lambda=sqrt(2+sqrt(3)). A common summable envelope bounds the omitted lattice tail, and rational interval bounds certify F(1)-F(sqrt(lambda))>1/10000.",
+  "transfer": "For nonconstancy of an infinite lattice sum, choose two explicit parameter values, bound both tails with one summable envelope, and certify the finite comparison outward with exact intervals.",
+  "limits": "Applies to the stated dodecagonal Gaussian phase function. The conclusion depends on R16's local-limit identification of this function with the walk observable. It does not prove period minimality, extrema, physical interpretation, or novelty. HORUS review is model-side, not human peer review.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e4d01c671d798a0898c54ed6ad84602fbcee932a/polygon-lattice-walks/R18/TOTO_RESEARCH_SPARKS_R18.md",
+    "visibility": "public",
+    "revision": "e4d01c671d798a0898c54ed6ad84602fbcee932a"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS (model-side review)"
+}
