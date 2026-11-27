@@ -1,0 +1,28 @@
+{
+  "id": "toto-exact-separation-resolution-20261127-r10",
+  "title": "Exact endpoint uniqueness does not ensure finite-resolution discrimination",
+  "mechanisms": [
+    "identifiability",
+    "minimum-separation",
+    "bounded-error",
+    "algebraic-norm",
+    "pell-units",
+    "worst-case",
+    "دقة الرصد",
+    "فصل الحالات",
+    "حدود القياس"
+  ],
+  "problem": "Determine whether distinct exact endpoints of a regular octagonal walk remain distinguishable as path length grows.",
+  "failure": "An inference from exact injectivity to robust discrimination would be invalid. The R09 regular octagon has no exact aliasing among distinct integer coordinate vectors, yet the smallest Euclidean separation shrinks with step count. This is a tested counterexample to the inference, not a failure of R09's exact statement.",
+  "correction": "Describe the actual reachable difference set; use algebraic conjugate norms to bound minimum separation below, and Pell units to construct close pairs above. In a bounded-error model, disjoint observation disks require minimum separation greater than twice the error radius.",
+  "transfer": "For any exact encoding or inverse observation problem, test minimum distance in the observable metric against measurement error, rather than relying on symbolic uniqueness. Separate worst-case ambiguity from its probability, and distinguish theoretical error bounds from physical detector behavior.",
+  "limits": "R10 proves order 1/n for the unit regular octagonal walk and author-run exact enumeration for n<=18. No independent review or originality assessment. The bounded-error model is mathematical; no actual detector, noisy experiment, or finite-tolerance collision probability was evaluated.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/9193ad87a96d321c3aa3014a2eed03cf976a7c0f/pascal-singmaster/toto-sparks/R10/TOTO_RESEARCH_SPARKS_R10.md",
+    "visibility": "public",
+    "revision": "9193ad87a96d321c3aa3014a2eed03cf976a7c0f"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
