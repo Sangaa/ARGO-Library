@@ -1,0 +1,25 @@
+{
+  "id": "robust-berth-vessel-specific-caps-20261127-r02",
+  "title": "Different delay caps can force more upstream buffer",
+  "mechanisms": [
+    "heterogeneous-constraints",
+    "max-plus-recurrence",
+    "prefix-difference-constraints",
+    "robust-scheduling",
+    "buffer-placement"
+  ],
+  "problem": "For a fixed order on one berth, find the minimum total idle gaps that guarantee each vessel's own worst-case departure-delay cap.",
+  "failure": "In the bounded example A=[0,0,0], B=[5,2,0], a common cap [5,5,5] needs total buffer 2 at [0,2,0], while caps [5,4,3] need total 4 at [0,3,1]. Using one shared cap misses stricter downstream requirements.",
+  "correction": "Use each endpoint's cap H_i in every interval demand A_j+sum(B_j..B_i)-H_i, reject immediately when A_i+B_i>H_i, then compute least feasible prefixes by longest paths. The theorem is for fixed order and unit buffer cost.",
+  "transfer": "When service limits differ by item, propagate each item's own bound through upstream delay chains. Do not substitute one shared cap unless that is the actual requirement.",
+  "limits": "One berth, fixed order, rectangular bounded arrival/overrun uncertainty and unit buffer cost. Certificate covers n=2,3 and small integer bounds/caps only; no operational data, novelty claim or human review.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/656bded4a90e9d0a817d3fe60430c77160a9336f/robust-berth-buffer-allocation/R02/ROBUST_BERTH_BUFFER_R02.md",
+    "visibility": "public",
+    "revision": "656bded4a90e9d0a817d3fe60430c77160a9336f"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS internal analytical collaboration agent; bounded model-side review"
+}
