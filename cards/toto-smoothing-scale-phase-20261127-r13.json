@@ -1,0 +1,26 @@
+{
+  "id": "toto-smoothing-scale-phase-20261127-r13",
+  "title": "Smooth observation may remove discontinuities without removing scale dependence",
+  "mechanisms": [
+    "scale-phase",
+    "gaussian-weight",
+    "theta-sum",
+    "certified-tail",
+    "asymptotic-scope",
+    "تنعيم",
+    "طور المقياس"
+  ],
+  "problem": "Test whether replacing R12's hard collision cutoff with a smooth Gaussian weight eliminates the critical-resolution scale phase.",
+  "failure": "A smooth response does not imply a single critical scaling limit. R13 provides a counterexample to that possible inference, not a failed physical experiment.",
+  "correction": "Reindex the parity lattice by its Pell-unit automorphism and use the local limit theorem with Gaussian domination. Certify nonconstancy of the analytic periodic limiting function by exact rational bounds at two phases, including a tail estimate.",
+  "transfer": "When changing an observation model, separate discontinuity artifacts from structural scale dependence. Test the latter after smoothing, and certify small differences against truncation and rounding errors.",
+  "limits": "One Gaussian response in the regular unit octagonal walk. R13 proves an analytic periodic phase profile and a gap greater than 0.03 between two phases. No minimal-period or global-extremum claim, no finite-time Gaussian path simulation, no independent review or physical inference.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/0539512b0afd968169b7f2cacae66530708513b8/pascal-singmaster/toto-sparks/R13/TOTO_RESEARCH_SPARKS_R13.md",
+    "visibility": "public",
+    "revision": "0539512b0afd968169b7f2cacae66530708513b8"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
