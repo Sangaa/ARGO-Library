@@ -1,0 +1,26 @@
+{
+  "id": "toto-radial-triple-ambiguity-20261127-r21",
+  "title": "Triangle side lengths can lose identifying information even for unit-length directions",
+  "mechanisms": [
+    "inverse-identification",
+    "distance-matrix",
+    "dihedral-equivalence",
+    "triple-correlation",
+    "four-point-observation",
+    "exact-enumeration",
+    "حدود الرصد"
+  ],
+  "problem": "Determine whether the vector triple recovery result of R20 still holds when only three pairwise distances are retained.",
+  "failure": "R21 constructs two noncongruent nine-direction unit-circle sets with identical labeled triangle distance distributions at one step, including repeated draws. Full vector triple uniqueness does not transfer to radial triple measurements.",
+  "correction": "Define the measurement precisely, reduce chord lengths to exact integer angular separation indices, and check all ordered tuples with replacement. Compare a four-point distance matrix, which separates this pair; retain absolute orientation information when available.",
+  "transfer": "When reducing observations to invariant features, test injectivity again. Distinguish the joint distance matrix from its separate marginals and from unsymmetrized cyclic correlations. Extra sample order can restore information lost through invariance, but a separator for one pair is not a universal theorem.",
+  "limits": "One-step uniform laws on two subsets of an 18-direction unit circle; not full regular polygons. Bounded search of 8230 canonical subsets, 729 triples and 6561 quadruples per law. No all-time, global minimality, general four-point sufficiency, noisy sampling, independent validation or novelty claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/0007ac749b30f74f0cf59e489420e8eea04f657b/polygon-lattice-walks/R21/TOTO_RESEARCH_SPARKS_R21.md",
+    "visibility": "public",
+    "revision": "0007ac749b30f74f0cf59e489420e8eea04f657b"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
