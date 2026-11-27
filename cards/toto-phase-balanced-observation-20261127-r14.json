@@ -1,0 +1,26 @@
+{
+  "id": "toto-phase-balanced-observation-20261127-r14",
+  "title": "Logarithmically balanced observations suppress arithmetic phase bias",
+  "mechanisms": [
+    "scale-phase",
+    "logarithmic-sampling",
+    "fourier-cancellation",
+    "periodic-quadrature",
+    "error-bound",
+    "توازن الرصد",
+    "طور المقياس"
+  ],
+  "problem": "Remove the scale phase from the R13 Gaussian-weighted limiting observable without changing the underlying walk.",
+  "failure": "Smoothing alone left a nonconstant phase profile in R13. Uniform sampling in ordinary time is not the same as uniform logarithmic phase averaging; zero displayed spread in a finite sample does not prove exact cancellation.",
+  "correction": "Average normalized observables over a complete logarithmic period, or use m equally spaced phase shifts that cancel Fourier modes not divisible by m. For this model the limiting bias is at most 1250/(14^m-1). Keep finite-time errors and numerical truncation distinct.",
+  "transfer": "For an established periodic nuisance parameter, design sampling in its actual phase coordinate, derive a uniform residual bound, and compare against numerical controls. Preserve phase-sensitive data separately when the phase carries information.",
+  "limits": "R14 concerns a mathematical mixture across observation times with critical Gaussian radius and exact-return normalization. Continuous averaging eliminates limiting phase; finite m has a bound, not exact cancellation. Standard quadrature theory credited. Numerical mean and Bessel orbit evaluations are bounded proxies. No finite-time error rate, actual instrument, independent review, or originality claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/750c210d4ee293a38c6e8c3ddf45ca2cd8aa895c/pascal-singmaster/toto-sparks/R14/TOTO_RESEARCH_SPARKS_R14.md",
+    "visibility": "public",
+    "revision": "750c210d4ee293a38c6e8c3ddf45ca2cd8aa895c"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
