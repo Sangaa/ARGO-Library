@@ -28,3 +28,5 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [R01 P001 — preserve the miss and baseline, with attribution limits](gold-lab-p001-baseline-miss-and-attribution-boundary-20261127.json)
 - [Verifier — mutation coverage and the untested target key](gold-lab-verifier-mutation-coverage-20261127.json)
 - [HORUS — internal analytic-agent provenance for berth R05](horus-internal-analytical-review-channel-robust-berth-r05-20261127.json)
+
+- [R06 — berth release versus channel queue coupling](berth-release-event-boundary-channel-coupling-20261127-r06.json) — owner-reported scope correction; non-canonical.
