@@ -1,0 +1,26 @@
+{
+  "id": "toto-radial-moment-identification-20261127-r19",
+  "title": "Calibrated radial moments recover polygon order but their distinguishing signal may shrink",
+  "mechanisms": [
+    "inverse-identification",
+    "radial-moments",
+    "roots-of-unity",
+    "calibration",
+    "conditioning",
+    "دقة الرصد",
+    "العزوم"
+  ],
+  "problem": "Recover the order of a regular polygon walk from distances between independent equal-length paths, without knowing orientation, step count or step length.",
+  "failure": "Normalized orbit spectra coincide for pentagon and decagon in R17; lower radial moments also coincide. Exact identification by a higher moment does not establish statistical robustness.",
+  "correction": "Use second and fourth distance moments to recover step count and step length; compare higher moments with a calibrated continuous-circle reference. The first deviation is at radial moment index m for a uniform regular m-gon. The standardized tenth-moment difference between pentagon and decagon is -(2n)^(-4).",
+  "transfer": "Separate calibration, identifiability, and statistical sensitivity. A known reference family and its first nonmatching moment can identify model parameters, but quantify the magnitude and noise before deployment.",
+  "limits": "Uniform independent regular-polygon steps, equal walk lengths, exact population moments, m>=3. Fifty polygon/time cases and 150 rational calibration checks. No finite-sample error, physical measurements, arbitrary competitor identification, orientation recovery, independent review or novelty claim. Publication label R18 was occupied; new R19 preserved existing record.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/44fa35dbc96d4e52dde86c46279ec3da997565ba/pascal-singmaster/toto-sparks/R19/TOTO_RESEARCH_SPARKS_R19.md",
+    "visibility": "public",
+    "revision": "44fa35dbc96d4e52dde86c46279ec3da997565ba"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
