@@ -1,0 +1,24 @@
+{
+  "id": "research-route-checkpoint-precision-20261127-r04",
+  "title": "Verify research routes and never turn a placeholder into a timestamp",
+  "mechanisms": [
+    "research-index-readback",
+    "provenance-precision",
+    "append-only-correction",
+    "checkpoint-evidence"
+  ],
+  "problem": "Publish a new research round so its derivation is discoverable and its checkpoint records only time precision supported by evidence.",
+  "failure": "R04's route initially listed its certificate and supporting notes but omitted its central derivation from the lane's Rounds section. A checkpoint heading also used `18:xx UTC`, a placeholder that was not an observed clock time.",
+  "correction": "HORUS review caught the missing derivation link; add it under Rounds and read it back from the proposed branch. Preserve the timestamp mistake but append an explicit correction: the date is known, exact time unavailable. Keep session and task identifiers UNKNOWN/UNREGISTERED when the runtime does not expose them.",
+  "transfer": "Before closing a research round, read back each route link against its target file. Record only measured timestamp precision; when a placeholder slips into an artifact, correct it append-only and label its evidence status.",
+  "limits": "Observed in one ARGO-Research R04 route and checkpoint. The correction establishes the facts of that documentation incident only; it does not validate a universal process improvement or promote a governance rule.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f66403aead4f6f7f07690b690adb1046fec56bee/robust-berth-buffer-allocation/R04/DEVELOPMENT_LOG.md",
+    "visibility": "public",
+    "revision": "f66403aead4f6f7f07690b690adb1046fec56bee"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS internal analytical collaboration agent; exact-head review, not human review"
+}

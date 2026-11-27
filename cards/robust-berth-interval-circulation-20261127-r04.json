@@ -1,0 +1,25 @@
+{
+  "id": "robust-berth-interval-circulation-20261127-r04",
+  "title": "Map interval packing to circulation with gap capacities",
+  "mechanisms": [
+    "interval-packing",
+    "maximum-cost-circulation",
+    "flow-conservation",
+    "dual-recovery",
+    "robust-buffer-costs"
+  ],
+  "problem": "Solve the R03 weighted interval-packing dual exactly as a circulation for fixed-order robust berth buffers.",
+  "failure": "If gap arcs point forward instead of backward, the three-vessel R03 witness has no profitable circulation and returns 0 instead of 3. Treating the flow objective alone as a buffer schedule also omits primal recovery.",
+  "correction": "Place each positive-demand interval as a forward arc j->i with profit w_(j,i), and each gap k as a backward arc k->k-1 with capacity c_k. Conservation makes the backward flow equal the load of intervals crossing the gap. Apply the R02 local feasibility checks A_i+B_i<=H_i first. Recover gap variables from the dual of the uncapped interval-arc circulation or solve the R03 primal at the certified optimum; finite redundant interval caps can add dual multipliers.",
+  "transfer": "When converting an interval packing LP to a network, prove the load-flow correspondence at every node, keep the edge orientation as a tested invariant, and distinguish the dual flow witness from the primal schedule.",
+  "limits": "The proof covers positive R02 interval demands after local feasibility checks, fixed vessel order, one berth and nonnegative linear gap costs. The standard-library prototype checks 144 deterministic small integer cases and one reversed-orientation negative control; it is not a production solver or a complexity benchmark. Related interval-flow and weighted-buffer work is established; exact specialization originality unresolved; no operational data or human specialist review.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f66403aead4f6f7f07690b690adb1046fec56bee/robust-berth-buffer-allocation/R04/ROBUST_BERTH_BUFFER_R04.md",
+    "visibility": "public",
+    "revision": "f66403aead4f6f7f07690b690adb1046fec56bee"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS internal analytical collaboration agent; accepted with limits at reviewed R04 head"
+}
