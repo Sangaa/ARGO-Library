@@ -1,0 +1,24 @@
+{
+  "id": "toto-causal-support-information-timing-20261127-r33",
+  "title": "Advance warning can reduce reserve without increasing peak capacity or delivery rate",
+  "mechanisms": [
+    "nonanticipativity",
+    "scenario-tree",
+    "rate-limit",
+    "value-of-information",
+    "robust-feasibility"
+  ],
+  "problem": "Quantify reserve attributable to late knowledge of a future demand when support has limited ramp rates.",
+  "failure": "A deterministic schedule using the realized future can implicitly anticipate unknown observations. Even sufficient peak capacity and ramp rate do not eliminate reserve needed before a branch is revealed.",
+  "correction": "For a known finite scenario tree, propagate required support backward over possible descendants with the increase limit, then forward with the decrease limit. The resulting least causal policy is feasible iff it meets caps and zero endpoints. For a perfect binary pulse warning, expected excess reserve equals (1-p)*rho*max(0,m-lead-1)^2 under the stated decision timing.",
+  "transfer": "Evaluate knowledge arrival separately from capacity and delivery rate. Quantify the benefit of reliable advance warnings against a nonanticipative baseline; distinguish preparation cost from financial waste and explicitly model wrong or missing forecasts.",
+  "limits": "Finite known exogenous scenario tree, robust no-shortfall, decisions after revelation, unit visits, fixed support direction, linear ramp limits. 4096 bounded integer tree instances, 592 pulse cases, 1776 expected-cost checks. Perfect signal example; no chance-constrained, empirical prediction, economic, organizational, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/c15110e936338e4f38e9e059346abfb27d248ec3/polygon-lattice-walks/R33/TOTO_RESEARCH_SPARKS_R33.md",
+    "visibility": "public",
+    "revision": "c15110e936338e4f38e9e059346abfb27d248ec3"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
