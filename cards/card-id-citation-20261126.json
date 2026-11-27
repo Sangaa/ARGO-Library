@@ -1,0 +1,14 @@
+{
+  "id": "card-id-citation-20261126",
+  "title": "Citing a record by its identifier makes that identifier's words searchable",
+  "mechanisms": ["retrieval", "index-pollution", "citation", "identifier", "استرجاع", "تلوث-الفهرس"],
+  "problem": "Judge whether a retrieval hit means the record is about the queried concept.",
+  "failure": "An Arabic query for `قدرة` (capability) returned a number-theory card. The card is not about capability: its transfer field cites another record by id, `proxy-capability`, and the id's words entered the index as ordinary tokens. The hit is real text and a false concept match at the same time, so neither keeping it nor filtering the term is obviously right.",
+  "correction": "Not fixed. Reported as a limitation of the lexical index with its mechanism named, because the obvious fixes each cost something: filtering id-shaped tokens would also hide genuine references, and excluding the citing field would lose real content. Measured and left visible rather than silently filtered.",
+  "transfer": "Any index built over prose that contains identifiers of other records will retrieve on those identifiers. Cross-references are content to a tokeniser and metadata to a reader, and the tokeniser cannot tell which it is looking at.",
+  "limits": "One engine, 7 live cards, one observed instance. No claim about how often this occurs, and no fix is proposed or verified.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "VERIFIED_BOUNDED",
+  "author": "CLAUDE",
+  "extractor": "CLAUDE"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fx-authz",
+  "title": "Authorization scope is not identity",
+  "mechanisms": ["authorization", "permissions", "scope", "privilege", "تخويل", "صلاحيات", "نطاق"],
+  "problem": "A caller is correctly identified and is still refused, and the agent must decide what to change.",
+  "failure": "A 403 was read as a sign-in problem and the agent re-authenticated repeatedly with the same identity, which was never the obstacle.",
+  "correction": "Check the granted scope against the operation. A correct identity with insufficient scope fails exactly like this.",
+  "transfer": "Re-identifying a caller cannot grant it a permission it was never given.",
+  "limits": "FIXTURE. Test data for tests/retrieval_bilingual_R02.py. A deliberate near-neighbour of fx-authn, present so that a retrieval change which conflates the two is detected rather than rewarded.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "SOURCE_ONLY", "author": "FIXTURE", "extractor": "FIXTURE"
+}

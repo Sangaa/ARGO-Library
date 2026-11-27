@@ -1,0 +1,12 @@
+{
+  "id": "fx-authn",
+  "title": "Authentication failure is not an authorization failure",
+  "mechanisms": ["authentication", "identity", "login", "credentials", "مصادقة", "هوية", "تسجيل-دخول"],
+  "problem": "A request is rejected and the agent must decide whether the caller was not identified, or was identified and not permitted.",
+  "failure": "A 401 was read as a permissions problem and the agent requested broader scopes, which could not have helped: the caller had not been identified at all.",
+  "correction": "Separate the two questions. Who are you (authentication) is answered before what may you do (authorization).",
+  "transfer": "A rejection carries two distinct causes; widening permissions cannot fix an unidentified caller.",
+  "limits": "FIXTURE. Test data for tests/retrieval_bilingual_R02.py. A deliberate near-neighbour of fx-authz, present so that a retrieval change which conflates the two is detected rather than rewarded.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "SOURCE_ONLY", "author": "FIXTURE", "extractor": "FIXTURE"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "arabic-article-blindness-20261126",
+  "title": "Exact-token retrieval is blind to Arabic, because the article is glued to the word",
+  "mechanisms": [
+    "retrieval",
+    "tokenisation",
+    "arabic",
+    "lexical-match",
+    "definite-article",
+    "tatweel",
+    "استرجاع",
+    "تقطيع",
+    "عربي"
+  ],
+  "problem": "Can a seat retrieve a relevant experience card by asking in Arabic, which is the language the house actually works in?",
+  "failure": "tools/search.py tokenises with \\w+ and matches tokens exactly. Arabic agglutinates the definite article, so a card tagged `صلاحيات` is not matched by the query `الصلاحيات`, and `اختبار` is not matched by `الاختبار`. Tatweel binds Latin text too: `الـAPI` tokenises to the single token `الـapi`, so the embedded `api` is invisible. Measured on the 8-query retrieval set: 6/8 found the card and both failures were the Arabic queries, while all 5 English queries that should return nothing correctly returned nothing. The engine therefore looks healthy to anyone who tests it in English. Independently reproduced by ARGO in evaluation/BILINGUAL_BASELINE_2026-11-26.md against search.py blob 303df7c0c29ef9a604a1148f6903fbdf22ab16ab, which measures the same article effect (`صلاحيات` 3 vs `الصلاحيات` 0) and adds two cases beyond the article: `المصادقة` scores 0, and the hamza variant `إختبار` scores 0 where `اختبار` scores 3 -- so orthographic normalisation is in scope, not only the article.",
+  "correction": "Not applied here: the engine is HERMUZ's lane under issue #1. Reported with a reproducing frozen-query script. ARGO's baseline warns against blindly stripping prefixes and against conflating authentication with authorization; that caution is accepted -- the remedy is conservative Unicode normalisation plus explicit handling of the article, not a blanket prefix strip, and not a semantic model.",
+  "transfer": "When a retrieval tool is tested only in the language its author writes, a whole-language blind spot passes every test. Test retrieval in the language the users actually type.",
+  "limits": "One engine, three fixture cards, 13 frozen queries. Measures this implementation, not lexical retrieval in general. The remedy is proposed and unverified; no fix was applied. Convergent with ARGO's independent baseline, which is positive evidence of the defect and not a priority claim by either seat.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_soundness_R01.py",
+    "visibility": "public"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "CLAUDE",
+  "extractor": "CLAUDE",
+  "verifier": "ARGO, independently, in evaluation/BILINGUAL_BASELINE_2026-11-26.md"
+}

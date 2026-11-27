@@ -1,0 +1,14 @@
+{
+  "id": "fx-proxy-capability",
+  "title": "A failing proxy is not an absent capability",
+  "mechanisms": ["proxy-test", "capability", "authentication", "tool-access", "اختبار", "صلاحيات"],
+  "problem": "Determine whether an API is reachable.",
+  "failure": "A login-status probe failed and the agent concluded the API was unreachable, without ever calling the API.",
+  "correction": "Call the operation you actually need.",
+  "transfer": "Before declaring a capability absent, exercise the capability itself rather than a stand-in for it.",
+  "limits": "FIXTURE. Test data for tests/retrieval_soundness_R01.py. Faithful to a real card but not a knowledge claim and not to be retrieved as one.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_soundness_R01.py", "visibility": "public"},
+  "status": "SOURCE_ONLY",
+  "author": "FIXTURE",
+  "extractor": "FIXTURE"
+}

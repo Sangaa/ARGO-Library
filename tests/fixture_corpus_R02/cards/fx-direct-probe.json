@@ -1,0 +1,12 @@
+{
+  "id": "fx-direct-probe",
+  "title": "A failing proxy is not an absent capability",
+  "mechanisms": ["proxy-test", "capability", "direct-probe", "tool-access", "اختبار", "قدرة", "اختبار-مباشر"],
+  "problem": "Decide whether an interface is reachable.",
+  "failure": "A status probe failed and the agent concluded the interface was unreachable, without ever exercising it.",
+  "correction": "Exercise the operation that is actually needed.",
+  "transfer": "Before declaring a capability absent, test the capability itself rather than a stand-in for it.",
+  "limits": "FIXTURE. Test data for tests/retrieval_bilingual_R02.py. Deliberately close to fx-indirect-signal so that a change collapsing direct and indirect testing is detected.",
+  "source": {"url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py", "visibility": "public"},
+  "status": "SOURCE_ONLY", "author": "FIXTURE", "extractor": "FIXTURE"
+}
