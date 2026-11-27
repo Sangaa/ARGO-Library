@@ -1,0 +1,27 @@
+{
+  "id": "toto-norm-spectrum-prime-splitting-20261127-r15",
+  "title": "Algebraic orbit counts can be replaced by ideal factorization with a completeness control",
+  "mechanisms": [
+    "cyclotomic-field",
+    "prime-splitting",
+    "unit-orbits",
+    "norm-spectrum",
+    "completeness-bound",
+    "certified-tail",
+    "تحليل العوامل",
+    "طيف المدارات"
+  ],
+  "problem": "Compute the phase-averaged regular-octagon Bessel orbit spectrum without relying on arbitrary coordinate-box truncation.",
+  "failure": "R14 used finite boxes for the orbit-sum proxy without a certified omitted-orbit tail. This was an explicit limitation, not a refutation of the identity.",
+  "correction": "Identify the even lattice with the ideal over 2, prove class number one and the unit quotient size, count ideals by the classical cyclotomic splitting law, and independently enumerate all norm representatives up to a proven coordinate bound. Bound the omitted norm tail separately from quadrature.",
+  "transfer": "When an orbit enumeration has a natural algebraic quotient, derive multiplicities via factorization and retain a completeness-bounded direct enumeration as a control. Include zero classes and distinguish tail error from numerical integration error.",
+  "limits": "R15 applies classical algebraic number theory to the R14 octagon observable. Exact comparisons for norms 1..2000; certified omitted norm tail after 10000, not certified finite-sum numerical quadrature. No originality, independent review, physical result or other polygon claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/cd1703781f6245720e878627d0a9d8e40f80d93e/pascal-singmaster/toto-sparks/R15/TOTO_RESEARCH_SPARKS_R15.md",
+    "visibility": "public",
+    "revision": "cd1703781f6245720e878627d0a9d8e40f80d93e"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
