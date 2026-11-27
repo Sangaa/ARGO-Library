@@ -1,0 +1,22 @@
+{
+  "id": "bounded-retrieval-measurement",
+  "title": "Measure retrieval boundaries before attributing context failures",
+  "mechanisms": [
+    "bounded-retrieval",
+    "payload-measurement",
+    "evidence-provenance",
+    "truncation"
+  ],
+  "problem": "When a system retrieves paginated records, a long or truncated response can be mistaken for evidence that the source service, model context, or a conversation lock failed. Reported estimates, returned body sizes, serialized response sizes, token counts, and wire bytes describe different things.",
+  "failure": "A combined response containing several independent large reads was truncated in one bounded working pass. Smaller explicit-page reads returned a limited subset. The observed body and serialized-response byte counts did not measure model tokens, network-wire bytes, or a causal link to conversation locking. Assumptions about a 'latest N' parameter or pagination behavior also require direct verification.",
+  "correction": "Read small metadata first, then request only the needed records or explicit bounded pages. Keep unrelated reads separate when combined output could exceed the review window. Record truncation as an observation. Label body bytes, serialized response bytes, wire bytes, and tokenizer-derived counts separately; report unavailable measures as unknown. Do not attribute a lock or failure to retrieval volume without independent telemetry or a controlled comparison.",
+  "transfer": "For large remote histories, avoid unbounded all-pages reads. Prefer exact target identifiers or small explicit page sizes, summarize each result before the next read, and preserve the request scope with the observation. If an output is truncated, continue with a narrower read and keep the truncation in the evidence record.",
+  "limits": "This is a bounded-session measurement lesson. It does not establish the behavior of any particular remote endpoint, the amount of content consumed by a model, or the cause of conversation locking. Detailed source correspondence is retained outside this public card. This card is a session-derived experience candidate, not canonical knowledge.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Library",
+    "visibility": "explicitly-cleared"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "ARGO working record",
+  "extractor": "ARGO working record"
+}
