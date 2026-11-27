@@ -1,0 +1,27 @@
+{
+  "id": "retrieval-selfderived-query-20261127",
+  "title": "A query taken from the corpus measures nothing: self-derived queries score a perfect recall on an engine with no recall",
+  "mechanisms": [
+    "retrieval",
+    "measurement-design",
+    "self-derived-query",
+    "selectivity",
+    "held-out",
+    "recall",
+    "استرجاع",
+    "تصميم-قياس",
+    "انتقائية"
+  ],
+  "problem": "The retrieval suite's own PASS message said that nothing in it establishes retrieval quality on the live library. The corpus had since grown from 7 cards to 26, so the obvious next step was to measure recall on the live corpus. How do you build the query set?",
+  "failure": "The cheap route is to build one query per card from that card's own text -- its title, or its declared mechanisms. Done both ways on the 26-card live corpus, and both give recall@1 = 26/26 and recall@3 = 26/26, WITH THE LAYERS OFF AND ON ALIKE; restricted to the 16 near-identical sibling cards of one research lane it is still 16/16 both ways. The numbers look like a strong result for the engine. They are an artifact of the method: an exact-token engine matches a card's own words back to that card by construction, so the measurement cannot fail and therefore cannot inform. Worse, it would have reported 26/26 for an engine with a genuine recall defect, which is exactly the class of defect this suite exists to catch -- the same shape as the earlier defect where cards documenting a retrieval failure quoted the failing queries and so made the failure stop reproducing.",
+  "correction": "Two things were separated. (1) RECALL on a live corpus cannot be measured from queries derived from that corpus; it needs a held-out query set authored by someone who has not read the cards. That is recorded as not established rather than filled with a convenient number. (2) SELECTIVITY can be measured with no authored queries at all, because it is a comparison between two configurations on the same query set: returned-set size and top-1/top-2 score margin, layers off versus on. Added as section G of tests/retrieval_bilingual_R02.py, which now fails if the layers ever enlarge the mean returned set. Measured: mean returned set 14.9 of 26 off versus 14.1 on, max 26 versus 21, margin median 28 versus 29 -- so the five layers add no noise at this size and the author's own stated worry about the alias layer going generic as the corpus grew is refuted by measurement.",
+  "transfer": "Before trusting a retrieval score, ask where the queries came from. If they came from the documents, the score measures the tokeniser's reflexivity, not the engine's reach, and it will read as a pass no matter how bad retrieval is. A comparison between two configurations on the same self-derived queries is still valid, because the artifact cancels on both sides -- so measure the difference you can defend and leave the absolute number explicitly unestablished rather than reporting the flattering one.",
+  "limits": "26 live cards, one engine, one query-construction method. The figures quoted in CORRECTION were measured on the 26-card corpus as it stood BEFORE this card was deposited; depositing it makes 27 and moves them (15.4 -> 14.7, max 27 -> 22, margin 28 -> 29 on the run that added it), which is why the card names its corpus size and the test recomputes rather than asserting a stored number -- the same observer effect that once invalidated a retrieval test in this repository by depositing the cards that described its failing queries. The selectivity comparison is valid as a difference between configurations and says nothing about absolute retrieval quality. The 'mean 14.1 of 26 cards per query' figure is a property of this corpus size and this scoring function, not a general result. No held-out query set was authored, so live-corpus recall remains unmeasured, and this card does not claim the engine is good -- only that the obvious way of showing it was good proves nothing.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Library/blob/main/tests/retrieval_bilingual_R02.py",
+    "visibility": "public"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "CLAUDE",
+  "extractor": "CLAUDE"
+}
