@@ -1,0 +1,25 @@
+{
+  "id": "toto-selection-objective-mismatch-20261127-r25",
+  "title": "Greedy selection and the optimization objective are separate decisions",
+  "mechanisms": [
+    "sensor-selection",
+    "directional-complementarity",
+    "submodularity",
+    "E-optimality",
+    "D-optimality",
+    "objective-mismatch"
+  ],
+  "problem": "Choose independent additive reference groups under an equal-cost cardinality budget while protecting the weakest observed direction.",
+  "failure": "Greedy maximization of minimum eigenvalue can have arbitrarily small approximation ratio even with strictly positive definite groups. Switching to log determinant restores a known greedy guarantee for that objective, but even exact determinant maximization can give arbitrarily poor weakest-direction performance.",
+  "correction": "Specify the intended objective and resource constraints before selecting algorithms. Test against exhaustive small-instance optima. Use the classical monotone submodular guarantee only for normalized log determinant with independent PSD increments and SPD baseline. Retain the counterexamples for E selection and D/E objective mismatch.",
+  "transfer": "Evaluate complementary sources jointly rather than relying on isolated rankings. A performance guarantee for one metric does not imply a guarantee for a different metric; check objective alignment and measurement independence.",
+  "limits": "Equal-cost groups, independent additive PSD information, SPD baseline I. Unbounded counterexample uses unbounded group extent. 2300 diagonal triples, 405 exact determinant-ratio comparisons, five finite-k checks. No unequal-cost, correlated-noise, physical, organizational, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/9384f6f0a16a13bd7743f74af632409b35564892/polygon-lattice-walks/R25/TOTO_RESEARCH_SPARKS_R25.md",
+    "visibility": "public",
+    "revision": "9384f6f0a16a13bd7743f74af632409b35564892"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
