@@ -1,0 +1,24 @@
+{
+  "id": "temporary-augmentation-known-puzzle-literature-boundary-20261127-r02",
+  "title": "The exact seven-camel puzzle is previously published; keep novelty bounded",
+  "mechanisms": [
+    "literature-first",
+    "novelty-boundary",
+    "integer-allocation",
+    "exact-return",
+    "provenance-correction"
+  ],
+  "problem": "R01 formalized the owner's seven-camel example with shares 1/2, 1/4, and 1/8. Although R01 made no originality claim, it initially lacked an exact-source check.",
+  "failure": "Without checking the exact fractions and wording, a familiar borrowing puzzle could be misclassified as a new problem or result. The user's example itself was not a new puzzle formulation.",
+  "correction": "Ian Stewart's Scientific American puzzle column reproduced in the OEIS A002966 source scan explicitly states the seven-camel problem with shares 1/2, 1/4, and 1/8. R02 records this as a known published variant, separates the elementary conservation identity from any novelty claim, and adds exact integer-feasibility gates: augmented total T=M/q and allocations x_i=M r_i/q must each be integers.",
+  "transfer": "Before proposing originality, search exact numeric structure, wording variants, and adjacent formal literatures. If an exact match is found, preserve it as prior art, cite the source, state what remains unreviewed, and narrow the claim. Treat a neighboring literature such as apportionment as context, not proof that the exact formulation is identical.",
+  "limits": "The cited source establishes that this exact puzzle was published; it does not constitute an exhaustive history or literature review. The apportionment connection is adjacent context. No new theorem, algorithm, originality, or human peer-review claim is made. Card remains source-only/non-canonical.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/66a3176662f0fcb972bc42c5b2e3554b316e4312/temporary-resource-augmentation/R02_INTEGER_FEASIBILITY_AND_LITERATURE.md",
+    "visibility": "public",
+    "revision": "66a3176662f0fcb972bc42c5b2e3554b316e4312"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO literature lookup and exact derivation; original puzzle attributed to Owner",
+  "extractor": "TOTO"
+}
