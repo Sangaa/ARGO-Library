@@ -1,0 +1,23 @@
+{
+  "id": "review-participant-provenance-20261127",
+  "title": "Name the actual review channel and do not invent a session identity",
+  "mechanisms": [
+    "review-provenance",
+    "agent-collaboration",
+    "session-identity",
+    "epistemic-status"
+  ],
+  "problem": "A record saying that HORUS reviewed work can be mistaken for a separate named ChatGPT conversation or an external peer review.",
+  "failure": "The earlier phrase “reviewed in-session” was ambiguous. For the cited work, the reviewer was an internal analytical collaboration agent; no separate ChatGPT conversation or provider-issued session ID existed.",
+  "correction": "Describe the actual participant and execution channel explicitly: internal analytical agent review; no standalone conversation/session ID; model-side review, not human peer review.",
+  "transfer": "Before claiming a named chair session, external review, or independent peer review, identify the actual runtime participant and recover its genuine session identifier. If none exists, say so.",
+  "limits": "This card records the specific R18/PR29 provenance correction and internal review. It does not establish a general review protocol or make internal model analysis equivalent to human peer review.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e34ea711d28696f284027932446e89cdacae69aa/polygon-lattice-walks/R18/REVIEW_PROVENANCE.md",
+    "visibility": "public",
+    "revision": "e34ea711d28696f284027932446e89cdacae69aa"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
