@@ -1,0 +1,25 @@
+{
+  "id": "toto-complementary-anchor-geometry-20261127-r24",
+  "title": "Directional complementarity matters more than individual reference strength",
+  "mechanisms": [
+    "anchor-design",
+    "directional-conditioning",
+    "centered-scatter",
+    "least-squares",
+    "correlated-errors",
+    "information-budget"
+  ],
+  "problem": "Can individually ill-conditioned reference groups jointly provide stable localization with known anchors?",
+  "failure": "Selecting references by individual conditioning alone can reject complementary groups. Reusing a noisy raw reading in several contrasts also induces correlation, so naive independent counting understates error.",
+  "correction": "Under independent equal-variance squared-range errors, combine within-group centered scatter matrices. Complementary kernels can yield positive definite total scatter. At fixed trace, isotropic scatter minimizes worst-direction variance and total MSE for the centered linear estimator. Retain covariance when readings are shared.",
+  "transfer": "Assess directions of missing information and independence of source measurements before combining observations. A trace budget is not a universal resource-cost model.",
+  "limits": "Known calibrated anchor coordinates and centered linear regression, independent readings with common variance. Exact checks on 420 grid subsets, 12 rational heights and 8 sign-error triples. No noisy anchor discovery, nonlinear optimality, real ranging experiment, discrete cost optimum, independent validation or novelty claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/9f725a25867b39a4dfdf0a75b9cda523db9318d5/polygon-lattice-walks/R24/TOTO_RESEARCH_SPARKS_R24.md",
+    "visibility": "public",
+    "revision": "9f725a25867b39a4dfdf0a75b9cda523db9318d5"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
