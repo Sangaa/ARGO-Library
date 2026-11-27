@@ -1,0 +1,25 @@
+{
+  "id": "robust-berth-buffer-placement-20261127-r01",
+  "title": "A total buffer budget does not determine a robust delay guarantee",
+  "mechanisms": [
+    "max-plus-recurrence",
+    "delay-propagation",
+    "buffer-placement",
+    "robust-scheduling",
+    "counterexample"
+  ],
+  "problem": "For a fixed-order one-berth vessel sequence, allocate idle gaps to keep every worst-case departure delay below a common cap.",
+  "failure": "With arrival bounds A=[0,0,0], overruns B=[5,2,0], and H=5, the same total buffer 2 gives delays [5,5,5] when placed as [0,2,0], but [5,7,5] when misplaced as [0,0,2].",
+  "correction": "Unroll the delay recurrence into interval constraints and enforce each required prefix difference. Under the stated rectangular uncertainty model, the minimum total buffer is given by longest-path prefix distances.",
+  "transfer": "For chained queues or fixed-order schedules, preserve where slack is inserted and account for upstream delay propagation; aggregate slack alone may hide a violated downstream bound.",
+  "limits": "One berth, fixed order, no reassignment or service windows, independent bounded arrivals/overruns, common cap H. The exact certificate exhaustively checks only n=2,3 with integer bounds in {0,1,2}; no field data, novelty claim or operational recommendation.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e34ea711d28696f284027932446e89cdacae69aa/robust-berth-buffer-allocation/R01/ROBUST_BERTH_BUFFER_R01.md",
+    "visibility": "public",
+    "revision": "e34ea711d28696f284027932446e89cdacae69aa"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO",
+  "verifier": "HORUS internal analytical collaboration agent; bounded model-side review"
+}
