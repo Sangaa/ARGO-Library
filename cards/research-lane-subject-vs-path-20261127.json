@@ -8,14 +8,14 @@
     "research-lane-design"
   ],
   "problem": "Polygon-walk records R09–R19 were stored beneath a directory named for Pascal and Singmaster, obscuring that their mathematical subject is separate.",
-  "failure": "The assistant treated the enclosing directory as evidence of mathematical dependency and initially described the work as an extension of Pascal research. The user corrected that classification.",
-  "correction": "Classify the lane from the actual question, model, and dependencies. Move the cumulative polygon-walk rounds to a subject-specific top-level lane, preserve Git history, and leave a route pointer at the old index.",
+  "failure": "The assistant treated the enclosing Pascal/Singmaster directory as evidence of mathematical dependency and initially described polygon-walk research as an extension of Pascal. The user corrected the classification; a retrospective R09–R19 dependency audit then separated actual derivation chains from path and retrieval context.",
+  "correction": "Classify from each round's research question, mathematical premises and actual reuse. Move cumulative polygon-walk rounds to a subject-specific top-level lane, preserve Git history, add old-path pointers, and document dependencies as mathematical premise versus contextual reuse.",
   "transfer": "Use storage paths as provenance, not as semantic proof. Before assigning a research lane, inspect the records' problem statements and mathematical dependencies.",
   "limits": "This lesson is grounded in one repository correction. It does not imply that every mixed-topic folder should be split or that directory names are never useful clues.",
   "source": {
-    "url": "https://github.com/Sangaa/ARGO-Research/blob/e4d01c671d798a0898c54ed6ad84602fbcee932a/polygon-lattice-walks/README.md",
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/e34ea711d28696f284027932446e89cdacae69aa/polygon-lattice-walks/README.md",
     "visibility": "public",
-    "revision": "e4d01c671d798a0898c54ed6ad84602fbcee932a"
+    "revision": "e34ea711d28696f284027932446e89cdacae69aa"
   },
   "status": "VERIFIED_BOUNDED",
   "author": "User correction; TOTO documented",
