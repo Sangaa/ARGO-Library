@@ -1,0 +1,24 @@
+{
+  "id": "toto-batch-radius-transition-barrier-20261127-r29",
+  "title": "Allowed batch radius changes transition barriers nonlinearly",
+  "mechanisms": [
+    "transition-barrier",
+    "exchange-radius",
+    "minimax-path",
+    "discrete-parity",
+    "threshold-connectivity"
+  ],
+  "problem": "Quantify how allowing up to p simultaneous identity replacements affects the minimum temporary E loss in the R27/R28 family.",
+  "failure": "Increasing the allowed batch size does not proportionally reduce the relative transition loss. For this family even a fixed fraction of k leaves a loss/gain ratio growing quadratically; a tiny endpoint gain may not justify a large permitted move.",
+  "correction": "Model the exact batch-distance graph, minimize the crossing bottleneck and account for parity of k-p. For k>=4 the barrier is no greater than the endpoint gain iff p>=k-1. Verify thresholds exactly on compressed and full identity graphs.",
+  "transfer": "Distinguish the transition graph from the endpoint objective. Test alternative allowed moves and their actual costs before interpreting abstract improvements; avoid treating endpoint-only batches as physically instantaneous operations.",
+  "limits": "Specific equal-trace R27 family with fixed cardinality, independent source identities and endpoint-only batch evaluation. 2144 count graph cases and 14 identity graph cases; 4316 exact connectivity checks. Displayed ratios are floating proxies. No operational transition system, financial, organizational, physical, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/be60225f329b07c5a26c57bd4ca9da78c963d177/polygon-lattice-walks/R29/TOTO_RESEARCH_SPARKS_R29.md",
+    "visibility": "public",
+    "revision": "be60225f329b07c5a26c57bd4ca9da78c963d177"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
