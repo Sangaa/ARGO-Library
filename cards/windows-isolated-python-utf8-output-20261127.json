@@ -1,0 +1,21 @@
+{
+  "id": "windows-isolated-python-utf8-output-20261127",
+  "title": "Windows isolated Python output encoding can fail before assertions",
+  "mechanisms": [
+    "Python isolated execution with redirected Windows stdout can retain a cp1252 output encoding in one observed lab setup.",
+    "A UTF-8 wrapper can configure output and launch an unchanged child CLI with -X utf8."
+  ],
+  "problem": "A CLI retrieval suite emitted Arabic output in a Windows lab where direct python -I execution failed before reaching assertions.",
+  "failure": "In one run, redirected stdout could not encode the Arabic output under cp1252. Setting PYTHONUTF8/PYTHONIOENCODING and running chcp 65001 did not change isolated-process behavior. The failure occurred before assertions, so it was not a test assertion failure.",
+  "correction": "An external wrapper reconfigured UTF-8 output and injected -X utf8 for the child CLI invocations while leaving repository source files unchanged; the exact-head CLI suite then ran.",
+  "transfer": "When a Windows CLI run fails while printing non-ASCII text, distinguish process/output encoding failure from a test failure. Capture whether assertions started, record the invocation mode, and try a bounded external UTF-8 wrapper before changing the product or test code.",
+  "limits": "One observed Windows lab and CLI run only. This does not establish that all Windows or Python -I environments behave this way, nor that the wrapper is a universal fix. The original source thread later corrected its session-name/registry-ID labeling; this card makes no session identity claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Library/pull/7#issuecomment-7209856660",
+    "visibility": "public",
+    "revision": "ARGO-Library PR #7 merged as d46d3332b5d18e87feb8762d3663ea13e7bac905"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "SEMER; bounded first-person lab observation, no provider identity claim",
+  "extractor": "SEMER R02 follow-up; source read 2026-11-27; link to later identity correction https://github.com/Sangaa/ARGO-Library/pull/7#issuecomment-7210014416"
+}
