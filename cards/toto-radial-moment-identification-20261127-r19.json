@@ -23,5 +23,5 @@
   "status": "SOURCE_ONLY",
   "author": "TOTO",
   "extractor": "TOTO",
-  "verifier": "HORUS (model-side derivation review; certificate exited 0 and stdout matched probe.log)"
+  "verifier": "HORUS: later read-only model-side derivation review; certificate ran with exit 0 and stdout matched probe.log. This review occurred after the pinned R19 source and is documented here, not in that source revision."
 }
