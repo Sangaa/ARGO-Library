@@ -1,0 +1,24 @@
+{
+  "id": "toto-minimax-transition-barrier-20261127-r28",
+  "title": "Endpoint improvement and necessary temporary transition loss differ",
+  "mechanisms": [
+    "local-search",
+    "transition-barrier",
+    "minimax-path",
+    "directional-complementarity",
+    "exact-graph-quotient"
+  ],
+  "problem": "Quantify the least temporary objective deterioration needed to escape the strict exchange trap in R27 using single swaps.",
+  "failure": "A strictly better endpoint does not imply a monotone path or a favorable transition. In the R27 family the necessary temporary E loss tends to zero, but the final gain shrinks faster, making the ratio unbounded.",
+  "correction": "Define a path bottleneck separately from endpoint gain; exploit count symmetry and prove a crossing lower bound with an attaining path. Verify with exact minimax Dijkstra and threshold connectivity, plus uncompressed identity-graph controls.",
+  "transfer": "Before recommending a change, distinguish endpoint improvement, allowed moves and temporary deterioration. Evaluate time, costs and persistence separately in any real application; do not transfer the abstract ratio as a financial or organizational forecast.",
+  "limits": "Specific R27 family, planar equal-trace independent sources, isotropic baseline, single swaps, fixed k. 128 count graphs with 16768 vertices and five identity graphs with 1272 vertices; exact Fraction checks, floating displayed ratios. No general path optimality theorem beyond this family, time/cost model, organizational, physical, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/0ade329d3fcc69f3770bb0227ae9101d2a1cd1ba/polygon-lattice-walks/R28/TOTO_RESEARCH_SPARKS_R28.md",
+    "visibility": "public",
+    "revision": "0ade329d3fcc69f3770bb0227ae9101d2a1cd1ba"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
