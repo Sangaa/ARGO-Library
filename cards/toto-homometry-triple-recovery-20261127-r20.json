@@ -1,0 +1,26 @@
+{
+  "id": "toto-homometry-triple-recovery-20261127-r20",
+  "title": "Pair differences may erase information that joint triple differences recover",
+  "mechanisms": [
+    "homometry",
+    "autocorrelation",
+    "convolution",
+    "triple-correlation",
+    "inverse-identification",
+    "phase-retrieval",
+    "حدود الرصد"
+  ],
+  "problem": "Test exact inverse uniqueness beyond the uniform equal-step regular polygon family.",
+  "failure": "Even the full pair-difference vector distribution for every common walk length can be identical for centered noncongruent step laws. Additional precision or radial moments of that distribution cannot resolve this ambiguity.",
+  "correction": "Construct reflected-factor convolution rivals and retain joint differences of three independent paths with a shared reference. A real moment-generating-function argument proves finite-support recovery up to translation from the full joint triple law; this is established triple-correlation uniqueness.",
+  "transfer": "Distinguish lost information from weak signals. Before increasing resolution or sample size, check whether the observation map is injective. If not, change the observation structure and retain joint dependence rather than just marginals.",
+  "limits": "R20 uses arbitrary finite-support step laws with unequal lengths, not two regular equal-length polygon laws. Exact pair comparisons n=1..5 and triple counts n=1; general convolution and MGF proofs separate. Known common n required for step recovery; no radial-only triple uniqueness, noise stability, physical or novelty claim. Old source path 404 recovered using live tree; research published in the new subject lane.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/b49b09d0821458a58ec4fa0dd371be8f2308b418/polygon-lattice-walks/R20/TOTO_RESEARCH_SPARKS_R20.md",
+    "visibility": "public",
+    "revision": "b49b09d0821458a58ec4fa0dd371be8f2308b418"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
