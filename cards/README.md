@@ -34,3 +34,5 @@ One immutable JSON card per lesson. Do not publish private material. See [schema
 - [R07 — finite holding capacity and upstream back-pressure](finite-holding-capacity-backpressure-20261127-r07.json) — owner-reported analogy; bounded deterministic example; non-canonical.
 
 - [Temporary augmentation — exact return condition](exact-return-temporary-augmentation-20261127.json) — owner-reported puzzle, exact arithmetic; non-canonical.
+
+- [R02 — exact seven-camel puzzle is known prior art](temporary-augmentation-known-puzzle-literature-boundary-20261127-r02.json) — source-only literature correction; non-canonical.
