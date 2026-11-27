@@ -1,0 +1,23 @@
+{
+  "id": "gold-lab-verifier-mutation-coverage-20261127",
+  "title": "A green verifier suite covers only the mutations it tries",
+  "mechanisms": [
+    "mutation-testing",
+    "negative-controls",
+    "join-integrity",
+    "verification-scope"
+  ],
+  "problem": "A Gold Lab replay verifier guarded four outcome-join fields, but the R02h negative test did not exercise the target_key guard.",
+  "failure": "Claude's source-pinned report says deleting the target_key rejection left all 26 tests green on both Python interpreters. The naive proposed test repair then failed because its expected error text did not match the actual guard; an assertion using an immutable bad fixture and the exact error message rejected the guard-removal mutation.",
+  "correction": "For every integrity guard, add a negative case that changes only that field and assert the exact intended rejection. Mutate or remove each guard to confirm the test suite turns red. Preserve the failed test form and its mismatch; do not treat the reported 26 passing tests as full verifier coverage.",
+  "transfer": "Build a field-by-field negative-control matrix for joins and replay invariants, then run each guard-removal mutation. Report separately: suite pass, mutation coverage, source authenticity, and real-world/scientific validity.",
+  "limits": "This is a transferred report from a synthetic record-integrity verifier, not a rerun during migration. It says nothing about real market data, the validity of forecasts, or model skill.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/f4cf1014212e1d2a81cd204fdd98ec3244efc981/gold-market/records/issue_comment_7093843627.md",
+    "visibility": "public",
+    "revision": "f4cf1014212e1d2a81cd204fdd98ec3244efc981"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "Claude report preserved in original issue record",
+  "extractor": "TOTO"
+}
