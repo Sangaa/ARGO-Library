@@ -1,0 +1,25 @@
+{
+  "id": "toto-rate-limited-scaffold-20261127-r32",
+  "title": "Sufficient capacity does not imply sufficient delivery rate",
+  "mechanisms": [
+    "rate-limit",
+    "timing",
+    "Lipschitz-envelope",
+    "adaptive-scaffold",
+    "anticipation",
+    "capacity-budget"
+  ],
+  "problem": "Determine whether R31's pointwise adaptive support remains feasible when its magnitude has a finite ramp rate and both endpoints have zero support.",
+  "failure": "Peak capacity alone cannot ensure the prescribed horizon is feasible. At intermediate feasible rates support must anticipate future demand, increasing cumulative usage without increasing peak capacity.",
+  "correction": "For known requirements z_i use the standard least Lipschitz majorant max_j(z_j-rho|i-j|). The exact endpoint feasibility threshold is max_i z_i/min(i,k-i); exact tracking threshold is max adjacent absolute demand difference. In the R31 family scaled thresholds tend to 1/8 and 1/4 respectively, and cumulative support at the minimum feasible rate tends to 1/32 instead of 1/48.",
+  "transfer": "Evaluate resource size, delivery rate and lead time separately. Anticipation requires a known or validated forecast of future demand; model uncertainty and delays explicitly rather than treating mathematical support as instantaneous physical capacity.",
+  "limits": "Known deterministic requirements, fixed minimum-length unit-step horizon, symmetric ramp, zero endpoints, independent additive directional information. 768 exact Fraction cases and 625 bounded integer schedule instances. No variable horizon optimization, physical, economic, organizational, predictive accuracy, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/c3046a559d95830d6c1e226bd11b12dc966b678a/polygon-lattice-walks/R32/TOTO_RESEARCH_SPARKS_R32.md",
+    "visibility": "public",
+    "revision": "c3046a559d95830d6c1e226bd11b12dc966b678a"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
