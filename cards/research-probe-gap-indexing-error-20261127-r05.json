@@ -1,0 +1,24 @@
+{
+  "id": "research-probe-gap-indexing-error-20261127-r05",
+  "title": "Keep one-based gap labels aligned with zero-based arrays",
+  "mechanisms": [
+    "off-by-one-indexing",
+    "gap-variable-mapping",
+    "negative-evidence-preservation",
+    "exact-stdout-readback"
+  ],
+  "problem": "A small exact circulation prototype must compare each returned gap vector and cost against brute-force primal and dual checks.",
+  "failure": "The first local expected-vector assertion compared a node-indexed representation [0,3,0] with a gap-indexed representation [3,0], although both encoded g_2=3 and g_3=0. A separate 201-line draft used costs[k-1] for an n-1 element gap-price vector and raised IndexError before its first witness. The failed source SHA-256 is 90ae9081611601faf1be9569a9d666296fb512d4d3ffab80f6c0a7e909b0aaef.",
+  "correction": "Name the mathematical variable g_k explicitly, map gap k to array slot k-2 in a zero-based gap vector ordered g_2,...,g_n, and use the same map for costs. Preserve the failed draft and traceback; rerun the corrected source and compare captured stdout byte-for-byte with the committed log.",
+  "transfer": "For one-based mathematical labels stored in zero-based arrays, write the mapping once and apply it to both variables and weights. Keep failed source and its traceback so later reviewers can distinguish a representation error from a mathematical counterexample.",
+  "limits": "Observed in one R05 prototype and reproduced on the preserved source; it does not estimate how often indexing errors occur elsewhere. The corrected bounded certificate is not a production solver or an originality result.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/6bfee0e0a80fdc2609b7bb3b016f1802d060239f/robust-berth-buffer-allocation/R05/DEVELOPMENT_LOG.md",
+    "visibility": "public",
+    "revision": "6bfee0e0a80fdc2609b7bb3b016f1802d060239f"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "TOTO; HORUS confirmed the preserved failure evidence",
+  "extractor": "TOTO",
+  "verifier": "TOTO reproduced the failure; HORUS read-only review checked the exact preserved hash and bounded outcome"
+}
