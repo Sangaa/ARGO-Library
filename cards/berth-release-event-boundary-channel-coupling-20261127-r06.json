@@ -1,0 +1,24 @@
+{
+  "id": "berth-release-event-boundary-channel-coupling-20261127-r06",
+  "title": "Define ship event endpoints before modeling berth and channel delays",
+  "mechanisms": [
+    "model-boundary",
+    "event-semantics",
+    "blocking-resource",
+    "queue-coupling",
+    "domain-feedback"
+  ],
+  "problem": "The berth-buffer model used the label departure delay for a quantity measured at handling completion, while the physical endpoint could instead be berth clearance, channel entry, a waiting place, or port exit. Owner feedback also identified weather, port/canal instructions, convoy order, route width, and capacity as omitted factors.",
+  "failure": "A fixed-order single-berth example can be mistaken for a model of vessel navigation or port departure. It assumes bounded independent arrival and handling delays and does not identify where a vessel waits after service.",
+  "correction": "Track separate times for handling completion C_i, berth release R_i, channel entry X_i, and the chosen port/holding endpoint. If a vessel can clear to a separate unconstrained holding area, channel slots do not feed back into berth-only feasibility. If the vessel remains at berth until its channel slot, channel delay blocks the next service. Shared pilots/tugs, limited anchorage, weather closure, convoy rules, and channel dimensions require explicit constraints.",
+  "transfer": "Before optimizing a queue, name the physical event each deadline measures and where each item waits between stages. Test whether downstream resource delays feed back into upstream resource release. Distinguish a berth-only objective from total port-exit delay.",
+  "limits": "This card captures owner-provided scope feedback and a two-vessel abstract illustration. It does not describe a specific port's regulations or establish a validated port schedule. The illustration is not a novelty claim; integrated berth/channel scheduling is established literature.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/0829a69b89f84ce79619588e57c3b9c80059ce47/robust-berth-buffer-allocation/R06/BERTH_CHANNEL_RELEASE_BOUNDARY_R06.md",
+    "visibility": "public",
+    "revision": "0829a69b89f84ce79619588e57c3b9c80059ce47"
+  },
+  "status": "USER_REPORTED",
+  "author": "Owner domain feedback; TOTO formalization",
+  "extractor": "TOTO"
+}
