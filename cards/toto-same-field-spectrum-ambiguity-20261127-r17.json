@@ -1,0 +1,27 @@
+{
+  "id": "toto-same-field-spectrum-ambiguity-20261127-r17",
+  "title": "Rescaled algebraic spectra can coincide for distinct geometries",
+  "mechanisms": [
+    "inverse-identification",
+    "cyclotomic-field",
+    "difference-lattice",
+    "norm-spectrum",
+    "calibration",
+    "complementary-observation",
+    "طيف المدارات",
+    "معايرة الرصد"
+  ],
+  "problem": "Test whether regular polygon geometry can be recovered from its normalized arithmetic norm spectrum.",
+  "failure": "R16 distinguished two models with different fields, but that observation does not prove universal inverse uniqueness. R17 gives distinct pentagon and decagon walks whose normalized spectra coincide exactly; absolute norm and collision mass still distinguish these models.",
+  "correction": "Derive the difference lattice independently of the original endpoint lattice. Multiplication by 1-zeta_5 gives a norm-five bijection between the full ring and its index-five ideal, commuting with unit action. Compare the complete normalized spectra and retain an independently defined dynamical collision statistic.",
+  "transfer": "When using a signature for identification, explicitly state which calibration or absolute scales are retained. Search for isomorphic quotients after normalization, then add a complementary observable if the signature loses distinctions.",
+  "limits": "Two specified uniform unit polygon walks; exact spectrum identity with 5000 norm comparisons, 500 rescaled comparisons and 2401 multiplication checks. Exact collision counts n=1..10; asymptotic ratio 5 and Gaussian profile identity derived, no finite-time Gaussian simulation, physical result, independent review or universal inverse classification.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/fc44123a6465c693c8d478aa95830d373054f2ad/pascal-singmaster/toto-sparks/R17/TOTO_RESEARCH_SPARKS_R17.md",
+    "visibility": "public",
+    "revision": "fc44123a6465c693c8d478aa95830d373054f2ad"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
