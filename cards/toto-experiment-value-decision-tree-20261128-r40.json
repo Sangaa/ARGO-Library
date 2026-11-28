@@ -1,0 +1,24 @@
+{
+  "id": "toto-experiment-value-decision-tree-20261128-r40",
+  "title": "Immediate information gain and total identification cost differ",
+  "mechanisms": [
+    "active-query",
+    "decision-tree",
+    "information-gain",
+    "dynamic-programming",
+    "objective-mismatch"
+  ],
+  "problem": "R39 asks whether experiment value can be computed before choosing a separating question.",
+  "failure": "A uniquely balanced initial binary question can cost more over the complete identification tree even with uniform hypothesis probabilities and equal test costs.",
+  "correction": "For a fixed finite distinguishable hypothesis set, minimize unnormalized cost D(S)=min_T[c(T)W(S)+D(S intersect T)+D(S minus T)]. The eight-hypothesis example has expected cost 13/4 if the balanced test is forced first versus 25/8 globally. Exact finite controls compare the recurrence with exhaustive trees.",
+  "transfer": "Evaluate immediate information gain, future available experiments and complete expected cost separately. Preserve unmodeled possibilities and avoid assuming that the finite candidate set contains the truth.",
+  "limits": "Known finite hypothesis set, positive weights and costs, noiseless deterministic binary tests, no state change. 96 test families, 15552 weighted/cost cases, 388800 tree evaluations. Classical optimal decision-tree problem. No novelty, empirical cognitive or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/666a6507866f907731c390f5db1f9d0f2ea7ebdb/polygon-lattice-walks/R40/TOTO_RESEARCH_SPARKS_R40.md",
+    "visibility": "public",
+    "revision": "666a6507866f907731c390f5db1f9d0f2ea7ebdb"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
