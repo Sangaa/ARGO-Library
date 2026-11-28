@@ -1,0 +1,24 @@
+{
+  "id": "toto-unknown-defect-observability-20261128-r38",
+  "title": "Unknown probability mass and unknown observability are different",
+  "mechanisms": [
+    "open-set",
+    "observational-equivalence",
+    "robust-allocation",
+    "exploration",
+    "coverage-limit"
+  ],
+  "problem": "Extend R37's known-class audit model to an unclassified defect region without pretending its detection sensitivity is known.",
+  "failure": "A label UNKNOWN does not supply a detection mechanism. If zero sensitivity is admissible, repeating tests cannot remove the worst-case unknown mass. Indistinguishable observable transcript distributions cannot identify distinct worlds.",
+  "correction": "Separate prior mass from detection capability. For a two-region model with known conditional miss rates and uncertain prior interval, worst miss is the maximum at the interval endpoints; discrete convexity permits exact deterministic allocation by binary search. Use independent challenge evidence for sensitivity bounds.",
+  "transfer": "Reserve exploration for mechanisms outside the current classification and state the coverage assumptions. Do not infer that no unknown defects exist from all-negative tests. Distinguish anomaly detection from explanation.",
+  "limits": "Single persistent defect, two disjoint regions, equal cost, conditional independent detection, fixed horizon. 4875 allocation cases, 34125 exact comparisons, 51 zero-sensitivity checks, 1022 finite subset checks. Randomized allocation minimax not analyzed. No empirical sensitivity calibration, production, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/eb239a1dfc0227e15a6241afe5c2521bfcb647b5/polygon-lattice-walks/R38/TOTO_RESEARCH_SPARKS_R38.md",
+    "visibility": "public",
+    "revision": "eb239a1dfc0227e15a6241afe5c2521bfcb647b5"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
