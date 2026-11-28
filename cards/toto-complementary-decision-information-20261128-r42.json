@@ -1,0 +1,24 @@
+{
+  "id": "toto-complementary-decision-information-20261128-r42",
+  "title": "Zero immediate decision value does not imply zero joint information value",
+  "mechanisms": [
+    "value-of-information",
+    "informational-complementarity",
+    "decision-relative-utility",
+    "myopic-stopping",
+    "parity"
+  ],
+  "problem": "R41 asks whether information can reduce uncertainty without changing a decision, and whether individually useless signals can be jointly valuable.",
+  "failure": "A policy refusing every acquisition without positive immediate net utility can stop even when a complete group of signals has positive net utility. In the parity model every proper subset has zero gross decision value.",
+  "correction": "Evaluate value relative to actions and utility, not uncertainty alone. Gross value is zero iff a common optimal action exists in every positive-probability branch. For k fair parity bits, complete acquisition yields gross gain 1/2 and positive net gain iff total cost is below 1/2. Retain potential complements in multi-step evaluation.",
+  "transfer": "Distinguish information for the current decision, future objectives and prerequisites that work jointly. Do not discard a fact solely because its immediate isolated contribution is zero. Model costs and timing before selecting a group.",
+  "limits": "Finite known states, deterministic signals, fixed actions and utility, independent fair bits for parity example. 10000 synthetic utility cases, 40000 equivalence checks, 2024 complementary cases and 508 parity subset checks. Established information complementarity, no prevalence inference, model-weight learning, production or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/289dfb169f1f0ededdaf65261495369b8f88a4f4/polygon-lattice-walks/R42/TOTO_RESEARCH_SPARKS_R42.md",
+    "visibility": "public",
+    "revision": "289dfb169f1f0ededdaf65261495369b8f88a4f4"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
