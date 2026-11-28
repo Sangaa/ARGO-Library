@@ -1,0 +1,24 @@
+{
+  "id": "toto-complementary-audit-coverage-20261128-r37",
+  "title": "Repeated reviews cannot compensate for a systematic coverage gap",
+  "mechanisms": [
+    "conditional-dependence",
+    "latent-defect-class",
+    "audit-coverage",
+    "discrete-search",
+    "complementarity"
+  ],
+  "problem": "R36 assumes independent audit detection; what happens when each method has persistent class-specific blind spots?",
+  "failure": "Multiplying unconditional marginal miss probabilities can create false assurance. Repeating one specialist leaves all other defect-class probability mass unobservable.",
+  "correction": "In a fixed single-defect model with disjoint specialist methods, conditional independent detections and equal costs, miss probability is sum_i p_i(1-s_i)^n_i. Selecting the greatest remaining marginal reduction p_i s_i(1-s_i)^n_i is optimal at every horizon. Equal priors and sensitivities admit cyclic coverage optimal in every contiguous audit window.",
+  "transfer": "Assess actual mechanism coverage, not the number or names of reviewers. Preserve unobservable probability mass; validate priors, conditional sensitivities and independence separately. Distinguish method diversity from actual independent verification.",
+  "limits": "One persistent defect, known disjoint classes, fixed prior, specialist methods, equal cost, no false positives or external observations. 6561 prefix cases, 120285 exact allocation comparisons and 3360 cyclic window checks. Classical discrete-search specialization, no production, reviewer calibration, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/6c3199199f2da32dc6db5f97d562d3ebd5b1ca85/polygon-lattice-walks/R37/TOTO_RESEARCH_SPARKS_R37.md",
+    "visibility": "public",
+    "revision": "6c3199199f2da32dc6db5f97d562d3ebd5b1ca85"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
