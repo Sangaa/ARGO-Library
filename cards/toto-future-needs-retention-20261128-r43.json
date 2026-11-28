@@ -1,0 +1,24 @@
+{
+  "id": "toto-future-needs-retention-20261128-r43",
+  "title": "Future complementary needs change the value of retention",
+  "mechanisms": [
+    "complementarity",
+    "retention",
+    "recoverability",
+    "hypergeometric-coverage",
+    "supermodularity"
+  ],
+  "problem": "R42 asks how to value knowledge with no current use but possible future bundle requirements.",
+  "failure": "Retaining individual items by immediate isolated gain can discard an entire valuable complementary bundle; retaining half the items does not imply half the future bundles remain usable.",
+  "correction": "For nonnegative weighted tasks requiring all members of T and independent missing-item recoverability r_i, expected weighted success is sum_T w_T product over missing required items of r_i; marginal returns are nondecreasing. Uniform k-subset requirements yield hypergeometric availability; without recovery it is C(m,k)/C(N,k). Uniform randomized retention is minimax against fixed unknown k-subsets independent of the draw.",
+  "transfer": "Separate active retention from reliable recoverability, and evaluate related bundles rather than isolated current scores. Model storage and retrieval cost, privacy, expiry and latency before any actual retention decision.",
+  "limits": "Finite fixed items, all-required task bundles, independent recoverability, synthetic weights, no substitution or retrieval budget. 108 uniform cases, 1680 formula checks, 131220 marginal checks and 98 greedy examples. No empirical memory, operational changes, originality or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/c18d4ea95efe212b2563f8f5fe9694f6c1b55a8f/polygon-lattice-walks/R43/TOTO_RESEARCH_SPARKS_R43.md",
+    "visibility": "public",
+    "revision": "c18d4ea95efe212b2563f8f5fe9694f6c1b55a8f"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
