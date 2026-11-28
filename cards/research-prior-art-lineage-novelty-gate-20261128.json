@@ -1,0 +1,24 @@
+{
+  "id": "research-prior-art-lineage-novelty-gate-20261128",
+  "title": "Follow the nearest paper’s predecessor chain before making a novelty claim",
+  "mechanisms": [
+    "prior-art-screening",
+    "citation-lineage",
+    "novelty-claim-scope",
+    "representation-vs-prediction"
+  ],
+  "problem": "A promising conceptual representation was being considered as a possible new research direction before the predecessor of the closest formal paper had been checked.",
+  "failure": "The broad framing risked treating goal-relative information usefulness and logical goal routes as potentially new. A direct 2019 predecessor, identified explicitly by the 2024 authors, already represented usefulness relative to user goals and current beliefs; the 2024 extension directly generalized the model to alternative routes. A separate 2008 study supplied behavioral prior art for desired-confidence stopping.",
+  "correction": "Close broad novelty claims at the scope directly covered by prior art. Preserve only the narrower, unresolved question of whether a fair combined model predicts held-out human acquisition order and stopping beyond the known components and sequential EVSI. Keep the experiment on hold until a predeclared contrast survives.",
+  "transfer": "Before committing resources to an experiment or novelty claim, trace the closest formal work to its cited predecessor and inspect how later work describes inherited assumptions and extensions. Separate (1) whether a representation exists, (2) whether it predicts behavior, and (3) whether it improves held-out prediction over fair alternatives. A bounded search or an unlocated comparison is not proof of novelty.",
+  "limits": "This card records one source-checked research episode, not a systematic review. The 2019 chapter full text was unavailable; details beyond its official abstract rely on the 2024 authors’ explicit retrospective description. No human experiment, new model comparison, or external human review was performed. The candidate predictive comparison remains unresolved and the card is non-canonical.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/ce7437510188a232c613b28ece5215fe186eac83/information-need-price-feedback/R08_PRIOR_ART_2019_LINEAGE_AND_STOP_GATE.md",
+    "visibility": "public",
+    "revision": "ce7437510188a232c613b28ece5215fe186eac83"
+  },
+  "status": "VERIFIED_BOUNDED",
+  "author": "Owner direction; TOTO documented the correction; HORUS contributed a separate ChatGPT review",
+  "extractor": "TOTO",
+  "verifier": "TOTO (official Springer and Cambridge pages); no human reviewer"
+}
