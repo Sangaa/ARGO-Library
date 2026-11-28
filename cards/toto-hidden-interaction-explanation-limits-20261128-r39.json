@@ -1,0 +1,24 @@
+{
+  "id": "toto-hidden-interaction-explanation-limits-20261128-r39",
+  "title": "Detecting a contradiction does not uniquely identify its mechanism",
+  "mechanisms": [
+    "hidden-interaction",
+    "observational-equivalence",
+    "active-query",
+    "model-scope",
+    "held-out-evaluation"
+  ],
+  "problem": "Can a correct additive law on its calibration region conceal an unobserved interaction, and what evidence separates detecting it from explaining it?",
+  "failure": "All tests below the interaction order agree with the additive baseline. A recovery algorithm assuming a single term can return an inconsistent explanation when two interactions are present; distinct two-term laws can even agree on every discovery input.",
+  "correction": "Within an exact single-monomial model, all-ones and leave-one-out queries recover the coefficient and interacting subset. Check consistency and choose separating queries for competing models. Classical mixed differences identify pair coefficients on Boolean inputs. Explicitly preserve the hypothesis-class limitation.",
+  "transfer": "Distinguish anomaly detection, identification within a specified family and invention of a new family. Freeze hypotheses, use unexposed test inputs, and preserve failures. Do not count deterministic synthetic controls as independent cognitive-learning evidence.",
+  "limits": "Known or calibrated additive baseline, deterministic Boolean oracle, single nonzero hidden term for recovery theorem. 3872 synthetic cases, 35328 anchor checks, 1290584 unused input comparisons, 17118 pair checks. Explicit two-law counterexample. No blinded researcher test, physical causality, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/040896e87b77a26f19d9c388dce59219c6e614db/polygon-lattice-walks/R39/TOTO_RESEARCH_SPARKS_R39.md",
+    "visibility": "public",
+    "revision": "040896e87b77a26f19d9c388dce59219c6e614db"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
