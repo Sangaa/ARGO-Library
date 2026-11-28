@@ -1,0 +1,24 @@
+{
+  "id": "toto-model-scope-certification-20261128-r41",
+  "title": "A question redundant inside a model can be essential for checking its scope",
+  "mechanisms": [
+    "certificate-complexity",
+    "model-misspecification",
+    "active-query",
+    "observational-equivalence",
+    "holdout-audit"
+  ],
+  "problem": "R40 assumes the true hypothesis belongs to a known finite set. Does identifying a unique candidate also validate that assumption?",
+  "failure": "In an even-parity response model m-1 coordinate queries identify the candidate under the promise, yet every incomplete transcript also admits an odd-parity completion. Zero-error membership needs m queries.",
+  "correction": "Require the observed coordinates to hit disagreement sets with both known competitors and modeled outside alternatives. Against all alternatives at Hamming distance at least d from a frozen candidate, m-d+1 matching coordinates are necessary and sufficient for exact certification; random validation reuses R35's hypergeometric miss probability.",
+  "transfer": "Separate hypothesis selection, scope validation, falsification and explanation. Preserve tests that challenge the model's assumptions, even if they give zero information gain within the model. Predeclare the candidate and independent audit frame before estimating detection guarantees.",
+  "limits": "Deterministic noiseless binary coordinate oracle, specified alternative class, fixed candidate and independent uniform audit. 502 transcript witnesses, 18434 subset comparisons, 240 audit probability checks. No bound against unmodeled alternatives, no stronger query oracle, production, novelty or independent validation claim.",
+  "source": {
+    "url": "https://github.com/Sangaa/ARGO-Research/blob/d993904ad450b6f885e3d8762ac7457dfa5ee10d/polygon-lattice-walks/R41/TOTO_RESEARCH_SPARKS_R41.md",
+    "visibility": "public",
+    "revision": "d993904ad450b6f885e3d8762ac7457dfa5ee10d"
+  },
+  "status": "SOURCE_ONLY",
+  "author": "TOTO",
+  "extractor": "TOTO"
+}
